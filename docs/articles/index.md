@@ -39,6 +39,17 @@
 </div>
 
 <div class="de-article-list">
+  <article class="de-article-card" data-article-tags="Careers,Marketing" data-article-author="Catherine Hatfield">
+    <div class="de-article-tags" aria-label="Article tags">
+      <button type="button" data-article-tag="Careers">Careers</button>
+      <button type="button" data-article-tag="Marketing">Marketing</button>
+    </div>
+    <a class="de-article-card__link" href="learner-spotlight-charlotte-gregson/">
+      <h3>Learner Spotlight: How Charlotte Gregson Built a Marketing Function From Scratch</h3>
+      <p>Charlotte Gregson joined RSM in telesales with no marketing background. Two years later, she'd built the company's first brand strategy and its first Google Ads campaign.</p>
+    </a>
+    <p class="de-byline">By <a href="../people/catherine-hatfield/" data-author-filter="Catherine Hatfield">Catherine Hatfield</a> · 23 July 2026</p>
+  </article>
   <article class="de-article-card" data-article-tags="AI,Careers" data-article-author="Matt Lucas">
     <div class="de-article-tags" aria-label="Article tags">
       <button type="button" data-article-tag="AI">AI</button>
