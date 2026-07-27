@@ -98,4 +98,21 @@
     <a class="de-person-card__cta" href="gemma-mckay/">View profile</a>
   </article>
 
+  <article class="de-person-card">
+    <div class="de-person-card__header">
+      <span class="de-person-card__initials" aria-hidden="true">CH</span>
+      <div>
+        <a class="de-person-card__name" href="catherine-hatfield/">Catherine Hatfield</a>
+        <p class="de-person-card__role">Head of Product Development</p>
+      </div>
+    </div>
+    <p>Learner experience, emerging technology, sustainability, and the impact of learning on people and business.</p>
+    <div class="de-person-card__topics" aria-label="Catherine Hatfield subject areas">
+      <span>Learner experience</span>
+      <span>Emerging tech</span>
+      <span>Women in tech</span>
+    </div>
+    <a class="de-person-card__cta" href="catherine-hatfield/">View profile</a>
+  </article>
+
 </div>
