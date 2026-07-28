@@ -3458,7 +3458,7 @@ body.de-modal-open {
 .de-prompt-workshop__checks article > span {
   display: block;
   margin-bottom: 7px;
-  color: var(--de-purple);
+  color: var(--de-bpp-purple);
   font-size: 0.75rem;
   font-weight: 900;
   letter-spacing: 0.04em;
@@ -3569,7 +3569,7 @@ body.de-modal-open {
 
 .de-prompt-workshop__example {
   background: #f8fafc;
-  border-left: 5px solid var(--de-purple);
+  border-left: 5px solid var(--de-bpp-purple);
 }
 
 .de-prompt-workshop__example p {
@@ -3607,7 +3607,7 @@ body.de-modal-open {
 }
 
 .de-decision-brief__scenario {
-  border-left: 5px solid var(--de-purple);
+  border-left: 5px solid var(--de-bpp-purple);
 }
 
 .de-decision-brief__scenario > span,
@@ -3616,7 +3616,7 @@ body.de-modal-open {
 .de-decision-brief__evidence article span {
   display: block;
   margin-bottom: 7px;
-  color: var(--de-purple);
+  color: var(--de-bpp-purple);
   font-size: 0.75rem;
   font-weight: 900;
   letter-spacing: 0.04em;
