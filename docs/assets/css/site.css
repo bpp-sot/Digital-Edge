@@ -144,6 +144,42 @@ body.de-modal-open {
   max-width: 1180px;
 }
 
+.de-hero,
+.de-article-hero,
+.de-article-index-hero,
+.de-people-hero,
+.de-profile-hero,
+.de-news-hero,
+.de-events-hero,
+.de-podcast-hero {
+  color: #ffffff;
+  background-position: center;
+  background-size: cover;
+  border-radius: 8px;
+}
+
+.de-article-hero,
+.de-article-index-hero,
+.de-people-hero,
+.de-profile-hero,
+.de-news-hero,
+.de-events-hero,
+.de-podcast-hero {
+  padding: 38px;
+  box-shadow: 0 22px 58px rgba(23, 33, 43, 0.12);
+}
+
+.de-article-hero,
+.de-article-index-hero,
+.de-people-hero,
+.de-profile-hero,
+.de-news-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
+  gap: 24px;
+  align-items: stretch;
+}
+
 .de-hero {
   display: grid;
   grid-template-columns: minmax(0, 1.45fr) minmax(280px, 0.55fr);
@@ -151,15 +187,12 @@ body.de-modal-open {
   align-items: stretch;
   margin: 28px 0 42px;
   padding: 48px;
-  color: #ffffff;
   background:
     linear-gradient(120deg, rgba(5, 5, 5, 0.92), rgba(111, 45, 168, 0.76)),
     radial-gradient(circle at 78% 18%, rgba(98, 199, 194, 0.55), transparent 28%),
     radial-gradient(circle at 18% 84%, rgba(244, 185, 66, 0.28), transparent 26%),
     linear-gradient(135deg, #101820 0%, #35104f 48%, #057d7a 100%);
   background-position: center 42%;
-  background-size: cover;
-  border-radius: 8px;
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08), 0 22px 58px rgba(23, 33, 43, 0.12);
 }
 
@@ -1150,22 +1183,12 @@ body.de-modal-open {
 
 .de-article-index-hero,
 .de-article-hero {
-  display: grid;
-  grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
-  gap: 24px;
-  align-items: stretch;
   margin: 28px 0 32px;
-  padding: 38px;
-  color: #ffffff;
   background:
     linear-gradient(120deg, rgba(5, 5, 5, 0.92), rgba(111, 45, 168, 0.72)),
     radial-gradient(circle at 82% 20%, rgba(230, 95, 69, 0.36), transparent 26%),
     radial-gradient(circle at 16% 88%, rgba(98, 199, 194, 0.32), transparent 28%),
     linear-gradient(135deg, #101820 0%, #35104f 58%, #2457a6 100%);
-  background-position: center;
-  background-size: cover;
-  border-radius: 8px;
-  box-shadow: 0 22px 58px rgba(23, 33, 43, 0.12);
 }
 
 [role="main"] > h1:first-child:has(+ .de-article-hero) {
@@ -1639,22 +1662,12 @@ body.de-modal-open {
 
 .de-people-hero,
 .de-profile-hero {
-  display: grid;
-  grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
-  gap: 24px;
-  align-items: stretch;
   margin: 28px 0 32px;
-  padding: 38px;
-  color: #ffffff;
   background:
     linear-gradient(120deg, rgba(5, 5, 5, 0.92), rgba(111, 45, 168, 0.72)),
     radial-gradient(circle at 82% 18%, rgba(244, 185, 66, 0.32), transparent 26%),
     radial-gradient(circle at 18% 86%, rgba(98, 199, 194, 0.34), transparent 28%),
     linear-gradient(135deg, #101820 0%, #35104f 56%, #057d7a 100%);
-  background-position: center;
-  background-size: cover;
-  border-radius: 8px;
-  box-shadow: 0 22px 58px rgba(23, 33, 43, 0.12);
 }
 
 .de-profile-hero {
@@ -1867,22 +1880,12 @@ body.de-modal-open {
 }
 
 .de-news-hero {
-  display: grid;
-  grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
-  gap: 24px;
-  align-items: stretch;
   margin: 28px 0 30px;
-  padding: 38px;
-  color: #ffffff;
   background:
     linear-gradient(120deg, rgba(5, 5, 5, 0.9), rgba(111, 45, 168, 0.74)),
     radial-gradient(circle at 80% 18%, rgba(98, 199, 194, 0.36), transparent 27%),
     radial-gradient(circle at 18% 86%, rgba(230, 95, 69, 0.28), transparent 25%),
     linear-gradient(135deg, #101820 0%, #35104f 52%, #2457a6 100%);
-  background-position: center;
-  background-size: cover;
-  border-radius: 8px;
-  box-shadow: 0 22px 58px rgba(23, 33, 43, 0.12);
 }
 
 .de-news-hero--single {
@@ -1891,17 +1894,11 @@ body.de-modal-open {
 
 .de-events-hero {
   margin: 28px 0 32px;
-  padding: 38px;
-  color: #ffffff;
   background:
     linear-gradient(120deg, rgba(5, 5, 5, 0.9), rgba(111, 45, 168, 0.68)),
     radial-gradient(circle at 82% 18%, rgba(244, 185, 66, 0.34), transparent 26%),
     radial-gradient(circle at 18% 86%, rgba(98, 199, 194, 0.32), transparent 28%),
     linear-gradient(135deg, #101820 0%, #35104f 54%, #057d7a 100%);
-  background-position: center;
-  background-size: cover;
-  border-radius: 8px;
-  box-shadow: 0 22px 58px rgba(23, 33, 43, 0.12);
 }
 
 .de-podcast-hero {
@@ -1910,17 +1907,11 @@ body.de-modal-open {
   gap: 24px;
   align-items: stretch;
   margin: 28px 0 32px;
-  padding: 38px;
-  color: #ffffff;
   background:
     linear-gradient(120deg, rgba(5, 5, 5, 0.9), rgba(5, 125, 122, 0.7)),
     radial-gradient(circle at 82% 18%, rgba(244, 185, 66, 0.28), transparent 26%),
     radial-gradient(circle at 18% 86%, rgba(111, 45, 168, 0.34), transparent 28%),
     linear-gradient(135deg, #101820 0%, #057d7a 48%, #35104f 100%);
-  background-position: center;
-  background-size: cover;
-  border-radius: 8px;
-  box-shadow: 0 22px 58px rgba(23, 33, 43, 0.12);
 }
 
 .de-podcast-hero h1 {
