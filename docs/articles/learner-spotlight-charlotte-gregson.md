@@ -2,60 +2,52 @@
 title: "Learner Spotlight: How Charlotte Gregson Built a Marketing Function From Scratch"
 description: "Charlotte Gregson joined RSM in telesales with no marketing background. Two years later, she'd built the company's first brand strategy, its first Google Ads campaign, and a case for what one determined apprentice can do."
 author: "Catherine Hatfield"
+author_slug: "catherine-hatfield"
+author_role: "Head of Product Development"
 date: "2026-07-23"
 updated: "2026-07-23"
+date_display: "23 July 2026"
+read_time: "6 min read"
 tags:
   - Careers
   - Marketing
 type: article
+render_macros: true
+hero_pill: "Learner spotlight"
+hero_quote: "\"We've had more inbound enquiries in the past few weeks than I think we have ever had.\" — Charlotte Gregson"
+summary:
+  - "Charlotte Gregson completed her Multi-Channel Marketing apprenticeship with RSM, having joined the business with a telesales background and no marketing expertise to lean on."
+  - "As RSM's first dedicated marketer, she took the company from one undefined brand to three distinct, clearly positioned brands, and launched its first ever Google Ads campaign."
+  - "The apprenticeship gave her a structured way to learn on the job, and gave RSM a marketing function that didn't exist before she arrived."
+takeaways:
+  - label: "The starting point"
+    text: "No internal marketing expertise, no structured activity, and one person tasked with building it from nothing."
+  - label: "The turning point"
+    text: "Structured learning, applied immediately: SEO, copywriting, campaign planning, and paid search."
+  - label: "The outcome"
+    text: "Three positioned brands, a first Google Ads campaign, and a business that now plans its marketing on purpose."
+discussion:
+  - "What would it take to give someone in your team the same \"first and only\" ownership Charlotte had, safely?"
+  - "Where in your organisation is there capability waiting to be built, if someone had structured support to build it?"
+  - "How do you currently measure whether learning is translating into business impact?"
+related:
+  - tag: "Marketing"
+    title: "ChatGPT Ads: What This Means for Marketing, Learning, and Apprentices"
+    description: "What advertising inside AI answers means for marketing, learning, trust, and future apprentices."
+    href: "../chatgpt-ads-marketing-learning-apprentices/"
+  - tag: "Careers"
+    title: "Are You an AI Optimist?"
+    description: "Technological capability alone does not decide the future we get. The choices we make shape whether it turns out well."
+    href: "../are-you-an-ai-optimist/"
 ---
 
 # Learner Spotlight: How Charlotte Gregson Built a Marketing Function From Scratch
 
-<section class="de-article-hero">
-  <div>
-    <div class="de-article-tags de-article-tags--hero" aria-label="Article tags">
-      <a href="../?tag=Careers">Careers</a>
-      <a href="../?tag=Marketing">Marketing</a>
-    </div>
-    <h1>Learner Spotlight: How Charlotte Gregson Built a Marketing Function From Scratch</h1>
-    <p>Charlotte Gregson joined RSM in telesales with no marketing background. Two years later, she'd built the company's first brand strategy, its first Google Ads campaign, and a case for what one determined apprentice can do.</p>
-    <div class="de-article-meta">
-      <a href="../../people/catherine-hatfield/">Catherine Hatfield</a>
-      <span>Head of Product Development</span>
-      <span>23 July 2026</span>
-      <span>6 min read</span>
-    </div>
-  </div>
-  <aside>
-    <span class="de-pill">Learner spotlight</span>
-    <p>"We've had more inbound enquiries in the past few weeks than I think we have ever had." — Charlotte Gregson</p>
-  </aside>
-</section>
+{{ article_hero(page) }}
 
-<section class="de-article-summary">
-  <h2>Article Summary</h2>
-  <ul>
-    <li>Charlotte Gregson completed her Multi-Channel Marketing apprenticeship with RSM, having joined the business with a telesales background and no marketing expertise to lean on.</li>
-    <li>As RSM's first dedicated marketer, she took the company from one undefined brand to three distinct, clearly positioned brands, and launched its first ever Google Ads campaign.</li>
-    <li>The apprenticeship gave her a structured way to learn on the job, and gave RSM a marketing function that didn't exist before she arrived.</li>
-  </ul>
-</section>
+{{ article_summary(page) }}
 
-<section class="de-article-takeaways">
-  <article>
-    <strong>The starting point</strong>
-    <p>No internal marketing expertise, no structured activity, and one person tasked with building it from nothing.</p>
-  </article>
-  <article>
-    <strong>The turning point</strong>
-    <p>Structured learning, applied immediately: SEO, copywriting, campaign planning, and paid search.</p>
-  </article>
-  <article>
-    <strong>The outcome</strong>
-    <p>Three positioned brands, a first Google Ads campaign, and a business that now plans its marketing on purpose.</p>
-  </article>
-</section>
+{{ article_takeaways(page) }}
 
 Every so often you meet an apprentice whose progress makes the whole point of the programme obvious. Charlotte Gregson is one of those stories. We spoke to her, and to her line manager at RSM, to understand what it actually looks like when someone builds a marketing function from a standing start, while studying for it at the same time.
 
@@ -144,27 +136,6 @@ Charlotte's journey is a good reminder of what apprenticeships are actually for:
 
 It was a pleasure for us at BPP and Estio to have Charlotte on board, and to share her story. Congrats, Charlotte, and we can't wait to see what's next for you.
 
-<section class="de-discussion-box">
-  <h2>Use This In A Discussion</h2>
-  <ul>
-    <li>What would it take to give someone in your team the same "first and only" ownership Charlotte had, safely?</li>
-    <li>Where in your organisation is there capability waiting to be built, if someone had structured support to build it?</li>
-    <li>How do you currently measure whether learning is translating into business impact?</li>
-  </ul>
-</section>
+{{ discussion_box(page) }}
 
-<section class="de-related-reading">
-  <h2>Related Reading</h2>
-  <div class="de-card-grid">
-    <a class="de-card" href="../chatgpt-ads-marketing-learning-apprentices/">
-      <span class="de-card__label">Marketing</span>
-      <h3>ChatGPT Ads: What This Means for Marketing, Learning, and Apprentices</h3>
-      <p>What advertising inside AI answers means for marketing, learning, trust, and future apprentices.</p>
-    </a>
-    <a class="de-card" href="../are-you-an-ai-optimist/">
-      <span class="de-card__label">Careers</span>
-      <h3>Are You an AI Optimist?</h3>
-      <p>Technological capability alone does not decide the future we get. The choices we make shape whether it turns out well.</p>
-    </a>
-  </div>
-</section>
+{{ related_reading(page) }}

@@ -1,61 +1,54 @@
 ---
 title: "Agentic Engineering: The Next Gap Education Needs to Close"
 description: "AI agents are moving from helpful sidekick to active participant in business workflows, making process design, permissions, governance, and professional judgement part of the learning agenda."
+lede: "AI agents are moving from helpful sidekick to active participant in real business workflows. That makes process design, permissions, governance, and professional judgement part of the learning agenda."
 author: "Jacob Reilly-Cooper"
+author_slug: "jacob-reilly-cooper"
+author_role: "Head of Tech Learning"
 date: "2026-05-21"
 updated: "2026-05-21"
+date_display: "21 May 2026"
+read_time: "7 min read"
 tags:
   - AI
   - Workflows
 type: article
+render_macros: true
+hero_pill: "Core idea"
+hero_quote: "A chatbot can be wrong in a document. An agent can be wrong inside a workflow. That is a different risk."
+summary:
+  - "AI agents create a different risk because they can act inside workflows, not just produce text."
+  - "Learners need process, data, permissions, testing, and governance judgement."
+  - "The education gap is moving from tool confidence to system understanding."
+takeaways:
+  - label: "What is changing?"
+    text: "AI is starting to use tools, access systems, and take bounded action."
+  - label: "Why it matters"
+    text: "Real workflows need permissions, tests, audit trails, and escalation routes."
+  - label: "Education signal"
+    text: "Learners need systems judgement, not only prompt confidence."
+discussion:
+  - "What should an AI agent never be allowed to do without human approval?"
+  - "What data, permissions, and audit trail would make an agentic workflow safer?"
+  - "How would you explain this risk to someone outside a technical role?"
+related:
+  - tag: "AI"
+    title: "From Mythos to Fable"
+    description: "Why frontier AI moving into workflows makes governance and readiness more important."
+    href: "../from-mythos-to-fable/"
+  - tag: "Marketing"
+    title: "ChatGPT Ads"
+    description: "What advertising inside AI answers means for marketing, learning, trust, and future apprentices."
+    href: "../chatgpt-ads-marketing-learning-apprentices/"
 ---
 
 # Agentic Engineering: The Next Gap Education Needs to Close
 
-<section class="de-article-hero">
-  <div>
-    <div class="de-article-tags de-article-tags--hero" aria-label="Article tags">
-      <a href="../?tag=AI">AI</a>
-      <a href="../?tag=Workflows">Workflows</a>
-    </div>
-    <h1>Agentic Engineering: The Next Gap Education Needs to Close</h1>
-    <p>AI agents are moving from helpful sidekick to active participant in real business workflows. That makes process design, permissions, governance, and professional judgement part of the learning agenda.</p>
-    <div class="de-article-meta">
-      <a href="../../people/jacob-reilly-cooper/">Jacob Reilly-Cooper</a>
-      <span>Head of Tech Learning</span>
-      <span>21 May 2026</span>
-      <span>7 min read</span>
-    </div>
-  </div>
-  <aside>
-    <span class="de-pill">Core idea</span>
-    <p>A chatbot can be wrong in a document. An agent can be wrong inside a workflow. That is a different risk.</p>
-  </aside>
-</section>
+{{ article_hero(page) }}
 
-<section class="de-article-summary">
-  <h2>Article Summary</h2>
-  <ul>
-    <li>AI agents create a different risk because they can act inside workflows, not just produce text.</li>
-    <li>Learners need process, data, permissions, testing, and governance judgement.</li>
-    <li>The education gap is moving from tool confidence to system understanding.</li>
-  </ul>
-</section>
+{{ article_summary(page) }}
 
-<section class="de-article-takeaways">
-  <article>
-    <strong>What is changing?</strong>
-    <p>AI is starting to use tools, access systems, and take bounded action.</p>
-  </article>
-  <article>
-    <strong>Why it matters</strong>
-    <p>Real workflows need permissions, tests, audit trails, and escalation routes.</p>
-  </article>
-  <article>
-    <strong>Education signal</strong>
-    <p>Learners need systems judgement, not only prompt confidence.</p>
-  </article>
-</section>
+{{ article_takeaways(page) }}
 
 ## The phrase sounds awful. The idea matters.
 
@@ -144,27 +137,6 @@ Agentic engineering may still be taking shape as a discipline, but the direction
 
 The next gap is not simply whether people can use AI. It is whether they can design, question, govern and improve the work that AI becomes part of. Once AI starts acting inside systems, getting this wrong is no longer theoretical.
 
-<section class="de-discussion-box">
-  <h2>Use This In A Discussion</h2>
-  <ul>
-    <li>What should an AI agent never be allowed to do without human approval?</li>
-    <li>What data, permissions, and audit trail would make an agentic workflow safer?</li>
-    <li>How would you explain this risk to someone outside a technical role?</li>
-  </ul>
-</section>
+{{ discussion_box(page) }}
 
-<section class="de-related-reading">
-  <h2>Related Reading</h2>
-  <div class="de-card-grid">
-    <a class="de-card" href="../from-mythos-to-fable/">
-      <span class="de-card__label">AI</span>
-      <h3>From Mythos to Fable</h3>
-      <p>Why frontier AI moving into workflows makes governance and readiness more important.</p>
-    </a>
-    <a class="de-card" href="../chatgpt-ads-marketing-learning-apprentices/">
-      <span class="de-card__label">Marketing</span>
-      <h3>ChatGPT Ads</h3>
-      <p>What advertising inside AI answers means for marketing, learning, trust, and future apprentices.</p>
-    </a>
-  </div>
-</section>
+{{ related_reading(page) }}

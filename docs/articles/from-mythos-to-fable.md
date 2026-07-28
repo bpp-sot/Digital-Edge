@@ -1,61 +1,54 @@
 ---
 title: "Mythos to Fable: The Warning Light Just Entered the Workflow"
 description: "Frontier AI is becoming more capable, more accessible, and more deeply connected to everyday work. The lesson is not panic; it is readiness."
+lede: "Frontier AI is becoming more capable, more accessible, and more deeply connected to everyday work. The lesson is not panic. It is readiness."
 author: "Jacob Reilly-Cooper"
+author_slug: "jacob-reilly-cooper"
+author_role: "Head of Tech Learning"
 date: "2026-06-15"
 updated: "2026-06-15"
+date_display: "15 June 2026"
+read_time: "7 min read"
 tags:
   - AI
   - Adoption
 type: article
+render_macros: true
+hero_pill: "Watch point"
+hero_quote: "Capability without governance can turn ambition into faster confusion with a better interface."
+summary:
+  - "Frontier AI is moving closer to everyday workflows, not staying in specialist labs."
+  - "Capability alone does not create transformation if data, process, and ownership are messy."
+  - "Education needs to build practical AI judgement across technical and non-technical roles."
+takeaways:
+  - label: "The shift"
+    text: "AI is moving from prompt response into longer-running, tool-using workflows."
+  - label: "The risk"
+    text: "Messy permissions, poor data, and unclear ownership become more serious at speed."
+  - label: "The response"
+    text: "Workforce development needs to build practical AI judgement across roles."
+discussion:
+  - "What does AI readiness mean beyond access to tools?"
+  - "Where might hidden safeguards create confusion or trust issues?"
+  - "Which roles in your organisation need stronger AI judgement first?"
+related:
+  - tag: "AI"
+    title: "Agentic Engineering"
+    description: "The next gap education needs to close as AI agents move into real workflows."
+    href: "../agentic-engineering/"
+  - tag: "Marketing"
+    title: "ChatGPT Ads"
+    description: "What advertising inside AI answers means for marketing, learning, trust, and future apprentices."
+    href: "../chatgpt-ads-marketing-learning-apprentices/"
 ---
 
 # Mythos to Fable: The Warning Light Just Entered the Workflow
 
-<section class="de-article-hero">
-  <div>
-    <div class="de-article-tags de-article-tags--hero" aria-label="Article tags">
-      <a href="../?tag=AI">AI</a>
-      <a href="../?tag=Adoption">Adoption</a>
-    </div>
-    <h1>Mythos to Fable: The Warning Light Just Entered the Workflow</h1>
-    <p>Frontier AI is becoming more capable, more accessible, and more deeply connected to everyday work. The lesson is not panic. It is readiness.</p>
-    <div class="de-article-meta">
-      <a href="../../people/jacob-reilly-cooper/">Jacob Reilly-Cooper</a>
-      <span>Head of Tech Learning</span>
-      <span>15 June 2026</span>
-      <span>7 min read</span>
-    </div>
-  </div>
-  <aside>
-    <span class="de-pill">Watch point</span>
-    <p>Capability without governance can turn ambition into faster confusion with a better interface.</p>
-  </aside>
-</section>
+{{ article_hero(page) }}
 
-<section class="de-article-summary">
-  <h2>Article Summary</h2>
-  <ul>
-    <li>Frontier AI is moving closer to everyday workflows, not staying in specialist labs.</li>
-    <li>Capability alone does not create transformation if data, process, and ownership are messy.</li>
-    <li>Education needs to build practical AI judgement across technical and non-technical roles.</li>
-  </ul>
-</section>
+{{ article_summary(page) }}
 
-<section class="de-article-takeaways">
-  <article>
-    <strong>The shift</strong>
-    <p>AI is moving from prompt response into longer-running, tool-using workflows.</p>
-  </article>
-  <article>
-    <strong>The risk</strong>
-    <p>Messy permissions, poor data, and unclear ownership become more serious at speed.</p>
-  </article>
-  <article>
-    <strong>The response</strong>
-    <p>Workforce development needs to build practical AI judgement across roles.</p>
-  </article>
-</section>
+{{ article_takeaways(page) }}
 
 When I wrote about the Mythos issue, the point was not to panic. It was to pay attention to a simple shift. AI systems were becoming much better at finding weaknesses in software, working through complex technical tasks and operating at a level that made cyber capability feel less like a future risk and more like something arriving at speed.
 
@@ -166,27 +159,6 @@ The question is no longer whether powerful AI is entering business workflows. It
 
 The question is whether organisations have the people, skills and confidence to use it wisely. That is where education has to respond with practical capability, responsible judgement and people who know what to do when the tools become powerful enough to matter.
 
-<section class="de-discussion-box">
-  <h2>Use This In A Discussion</h2>
-  <ul>
-    <li>What does AI readiness mean beyond access to tools?</li>
-    <li>Where might hidden safeguards create confusion or trust issues?</li>
-    <li>Which roles in your organisation need stronger AI judgement first?</li>
-  </ul>
-</section>
+{{ discussion_box(page) }}
 
-<section class="de-related-reading">
-  <h2>Related Reading</h2>
-  <div class="de-card-grid">
-    <a class="de-card" href="../agentic-engineering/">
-      <span class="de-card__label">AI</span>
-      <h3>Agentic Engineering</h3>
-      <p>The next gap education needs to close as AI agents move into real workflows.</p>
-    </a>
-    <a class="de-card" href="../chatgpt-ads-marketing-learning-apprentices/">
-      <span class="de-card__label">Marketing</span>
-      <h3>ChatGPT Ads</h3>
-      <p>What advertising inside AI answers means for marketing, learning, trust, and future apprentices.</p>
-    </a>
-  </div>
-</section>
+{{ related_reading(page) }}

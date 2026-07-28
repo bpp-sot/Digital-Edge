@@ -2,60 +2,52 @@
 title: "Building Better Tech: Why Sustainable Innovation Matters More Than Ever"
 description: "Every digital interaction relies on physical infrastructure somewhere in the world. As AI accelerates, understanding tech's environmental footprint is becoming part of what it means to build responsibly."
 author: "Gemma McKay"
+author_slug: "gemma-mckay"
+author_role: "Head of Programmes, Data Science &amp; Software Engineering"
 date: "2026-07-06"
 updated: "2026-07-06"
+date_display: "6 July 2026"
+read_time: "7 min read"
 tags:
   - Sustainability
   - AI
 type: article
+render_macros: true
+hero_pill: "Watch point"
+hero_quote: "The cloud is not weightless. Every stream, prompt, and upload runs on data centres, water, and energy somewhere in the world."
+summary:
+  - "Tech is often seen as low-impact compared to manufacturing or transport, but it depends on real infrastructure: data centres, cooling, and energy."
+  - "AI is accelerating both the environmental risk and the visibility of the problem, alongside genuine sustainability solutions."
+  - "Individuals can act through longevity and repair; organisations need to start with measurement."
+takeaways:
+  - label: "The blind spot"
+    text: "Digital activity feels invisible, but every interaction relies on physical systems somewhere."
+  - label: "The dual role"
+    text: "Tech is helping solve environmental problems and creating new ones at the same time."
+  - label: "The response"
+    text: "Sustainability needs to sit alongside technical skill in how we prepare future tech professionals."
+discussion:
+  - "Where does your organisation's tech footprint feel invisible, and what would it take to measure it?"
+  - "Is \"move fast and break things\" still the right approach when environmental cost is on the table?"
+  - "What's one habit around device replacement or cloud storage you could realistically change?"
+related:
+  - tag: "AI"
+    title: "Are You an AI Optimist?"
+    description: "Why framing, jobs, and the choices we make while building AI shape whether it turns out well."
+    href: "../are-you-an-ai-optimist/"
+  - tag: "AI"
+    title: "From Mythos to Fable"
+    description: "Why frontier AI moving into workflows makes governance and readiness more important."
+    href: "../from-mythos-to-fable/"
 ---
 
 # Building Better Tech: Why Sustainable Innovation Matters More Than Ever
 
-<section class="de-article-hero">
-  <div>
-    <div class="de-article-tags de-article-tags--hero" aria-label="Article tags">
-      <a href="../?tag=Sustainability">Sustainability</a>
-      <a href="../?tag=AI">AI</a>
-    </div>
-    <h1>Building Better Tech: Why Sustainable Innovation Matters More Than Ever</h1>
-    <p>Every digital interaction relies on physical infrastructure somewhere in the world. As AI accelerates, understanding tech's environmental footprint is becoming part of what it means to build responsibly.</p>
-    <div class="de-article-meta">
-      <a href="../../people/gemma-mckay/">Gemma McKay</a>
-      <span>Head of Programmes, Data Science &amp; Software Engineering</span>
-      <span>6 July 2026</span>
-      <span>7 min read</span>
-    </div>
-  </div>
-  <aside>
-    <span class="de-pill">Watch point</span>
-    <p>The cloud is not weightless. Every stream, prompt, and upload runs on data centres, water, and energy somewhere in the world.</p>
-  </aside>
-</section>
+{{ article_hero(page) }}
 
-<section class="de-article-summary">
-  <h2>Article Summary</h2>
-  <ul>
-    <li>Tech is often seen as low-impact compared to manufacturing or transport, but it depends on real infrastructure: data centres, cooling, and energy.</li>
-    <li>AI is accelerating both the environmental risk and the visibility of the problem, alongside genuine sustainability solutions.</li>
-    <li>Individuals can act through longevity and repair; organisations need to start with measurement.</li>
-  </ul>
-</section>
+{{ article_summary(page) }}
 
-<section class="de-article-takeaways">
-  <article>
-    <strong>The blind spot</strong>
-    <p>Digital activity feels invisible, but every interaction relies on physical systems somewhere.</p>
-  </article>
-  <article>
-    <strong>The dual role</strong>
-    <p>Tech is helping solve environmental problems and creating new ones at the same time.</p>
-  </article>
-  <article>
-    <strong>The response</strong>
-    <p>Sustainability needs to sit alongside technical skill in how we prepare future tech professionals.</p>
-  </article>
-</section>
+{{ article_takeaways(page) }}
 
 Working in tech, I'm surrounded by conversations about innovation every day. We talk about AI, automation, digital transformation, and emerging technologies. We talk about what the future might look like, how tech is changing the way we work, and the opportunities these developments create for businesses and society.
 
@@ -145,27 +137,6 @@ Looking ahead, I think the future of sustainable tech ultimately comes down to p
 
 One thing I've always loved about the tech sector is that we are an industry full of creative problem solvers. If we can apply the same ingenuity to environmental challenges that we apply to technological ones, I genuinely believe our industry can become an even greater force for good.
 
-<section class="de-discussion-box">
-  <h2>Use This In A Discussion</h2>
-  <ul>
-    <li>Where does your organisation's tech footprint feel invisible, and what would it take to measure it?</li>
-    <li>Is "move fast and break things" still the right approach when environmental cost is on the table?</li>
-    <li>What's one habit around device replacement or cloud storage you could realistically change?</li>
-  </ul>
-</section>
+{{ discussion_box(page) }}
 
-<section class="de-related-reading">
-  <h2>Related Reading</h2>
-  <div class="de-card-grid">
-    <a class="de-card" href="../are-you-an-ai-optimist/">
-      <span class="de-card__label">AI</span>
-      <h3>Are You an AI Optimist?</h3>
-      <p>Why framing, jobs, and the choices we make while building AI shape whether it turns out well.</p>
-    </a>
-    <a class="de-card" href="../from-mythos-to-fable/">
-      <span class="de-card__label">AI</span>
-      <h3>From Mythos to Fable</h3>
-      <p>Why frontier AI moving into workflows makes governance and readiness more important.</p>
-    </a>
-  </div>
-</section>
+{{ related_reading(page) }}

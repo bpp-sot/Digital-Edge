@@ -2,60 +2,52 @@
 title: "Are You an AI Optimist?"
 description: "Technological capability alone does not decide the future we get. The choices we make in how we talk about AI, prepare for jobs, and build products shape whether it turns out well."
 author: "Matt Lucas"
+author_slug: "matt-lucas"
+author_role: "Associate Professor of Technology, BPP University"
 date: "2026-07-09"
 updated: "2026-07-09"
+date_display: "9 July 2026"
+read_time: "9 min read"
 tags:
   - AI
   - Careers
 type: article
+render_macros: true
+hero_pill: "Big question"
+hero_quote: "Given the limited agency most of us have over a global technology, how do we nudge things towards a good outcome rather than a bad one?"
+summary:
+  - "Capability does not determine outcome. The same technology could support a broadly prosperous future or a deeply unequal one."
+  - "AI genuinely is exposing some roles and tasks, but the honest response is preparation, not panic or denial."
+  - "Small choices, in language, engineering, and product design, accumulate into the environment everyone else has to live in."
+takeaways:
+  - label: "The framing"
+    text: "Calling AI a \"copilot\" rather than a competitor changes the questions we ask about it."
+  - label: "The jobs question"
+    text: "AI automates tasks, not whole jobs, but entry-level work needs new ways to build experience."
+  - label: "The engineering question"
+    text: "Proportionate, open, simple technology choices are what make optimism deserved rather than assumed."
+discussion:
+  - "Which tasks in your role should be delegated to AI, and which decisions should stay meaningfully human?"
+  - "If entry-level tasks shrink, how should learners build the judgement those tasks used to teach?"
+  - "Where have you seen AI added to a product without solving an actual problem?"
+related:
+  - tag: "AI"
+    title: "Agentic Engineering"
+    description: "The next gap education needs to close as AI agents move from advice into real workflows."
+    href: "../agentic-engineering/"
+  - tag: "Sustainability"
+    title: "Building Better Tech"
+    description: "Why sustainable innovation is becoming as important a professional judgement as technical skill."
+    href: "../building-better-tech/"
 ---
 
 # Are You an AI Optimist?
 
-<section class="de-article-hero">
-  <div>
-    <div class="de-article-tags de-article-tags--hero" aria-label="Article tags">
-      <a href="../?tag=AI">AI</a>
-      <a href="../?tag=Careers">Careers</a>
-    </div>
-    <h1>Are You an AI Optimist?</h1>
-    <p>Technological capability alone does not decide the future we get. The choices we make in how we talk about AI, prepare for jobs, and build products shape whether it turns out well.</p>
-    <div class="de-article-meta">
-      <a href="../../people/matt-lucas/">Matt Lucas</a>
-      <span>Associate Professor of Technology, BPP University</span>
-      <span>9 July 2026</span>
-      <span>9 min read</span>
-    </div>
-  </div>
-  <aside>
-    <span class="de-pill">Big question</span>
-    <p>Given the limited agency most of us have over a global technology, how do we nudge things towards a good outcome rather than a bad one?</p>
-  </aside>
-</section>
+{{ article_hero(page) }}
 
-<section class="de-article-summary">
-  <h2>Article Summary</h2>
-  <ul>
-    <li>Capability does not determine outcome. The same technology could support a broadly prosperous future or a deeply unequal one.</li>
-    <li>AI genuinely is exposing some roles and tasks, but the honest response is preparation, not panic or denial.</li>
-    <li>Small choices, in language, engineering, and product design, accumulate into the environment everyone else has to live in.</li>
-  </ul>
-</section>
+{{ article_summary(page) }}
 
-<section class="de-article-takeaways">
-  <article>
-    <strong>The framing</strong>
-    <p>Calling AI a "copilot" rather than a competitor changes the questions we ask about it.</p>
-  </article>
-  <article>
-    <strong>The jobs question</strong>
-    <p>AI automates tasks, not whole jobs, but entry-level work needs new ways to build experience.</p>
-  </article>
-  <article>
-    <strong>The engineering question</strong>
-    <p>Proportionate, open, simple technology choices are what make optimism deserved rather than assumed.</p>
-  </article>
-</section>
+{{ article_takeaways(page) }}
 
 As Programme Lead for AI and Machine Learning here at BPP University, "are you an AI optimist?" is a discussion I have with students all the time. Admittedly, the question tends to produce something more complicated than a simple yes or no.
 
@@ -206,27 +198,6 @@ As students, educators, engineers, and users, we can frame AI as a tool rather t
 
 So, are you an AI optimist? Perhaps the most useful answer is not "yes" or "no", but: "I'm working on it".
 
-<section class="de-discussion-box">
-  <h2>Use This In A Discussion</h2>
-  <ul>
-    <li>Which tasks in your role should be delegated to AI, and which decisions should stay meaningfully human?</li>
-    <li>If entry-level tasks shrink, how should learners build the judgement those tasks used to teach?</li>
-    <li>Where have you seen AI added to a product without solving an actual problem?</li>
-  </ul>
-</section>
+{{ discussion_box(page) }}
 
-<section class="de-related-reading">
-  <h2>Related Reading</h2>
-  <div class="de-card-grid">
-    <a class="de-card" href="../agentic-engineering/">
-      <span class="de-card__label">AI</span>
-      <h3>Agentic Engineering</h3>
-      <p>The next gap education needs to close as AI agents move from advice into real workflows.</p>
-    </a>
-    <a class="de-card" href="../building-better-tech/">
-      <span class="de-card__label">Sustainability</span>
-      <h3>Building Better Tech</h3>
-      <p>Why sustainable innovation is becoming as important a professional judgement as technical skill.</p>
-    </a>
-  </div>
-</section>
+{{ related_reading(page) }}

@@ -1,60 +1,53 @@
 ---
 title: "ChatGPT Ads: What This Means for Marketing, Learning, and the Next Generation of Apprentices"
 description: "AI answers are becoming places where influence happens, changing how brands are discovered, how learners make decisions, and how marketers earn trust."
+lede: "AI answers are becoming places where influence happens. That changes how brands are discovered, how learners make decisions, and how marketers earn trust."
 author: "David Green"
+author_slug: "david-green"
 date: "2026-06-05"
 updated: "2026-06-05"
+date_display: "5 June 2026"
+read_time: "8 min read"
 tags:
   - Marketing
   - AI
 type: article
+render_macros: true
+hero_pill: "Big question"
+hero_quote: "If an answer can also be an advert, how do we protect trust while teaching people to navigate influence?"
+summary:
+  - "AI answers are becoming commercial spaces where influence can happen inside the response."
+  - "Marketers will need to think beyond clicks, keywords, and traditional search journeys."
+  - "Learners need critical judgement so they can spot influence and protect trust."
+takeaways:
+  - label: "The shift"
+    text: "People are moving from searching through options to receiving direct AI answers."
+  - label: "The tension"
+    text: "Paid influence may become harder to spot when it is woven into helpful responses."
+  - label: "The learning need"
+    text: "Future marketers need visibility skills and critical judgement in equal measure."
+discussion:
+  - "How should sponsored AI recommendations be labelled?"
+  - "What skills do future marketers need if AI tools shape discovery?"
+  - "How can learners question AI answers without becoming cynical about everything?"
+related:
+  - tag: "AI"
+    title: "Agentic Engineering"
+    description: "Why AI moving from advice into workflows changes what learners need to know."
+    href: "../agentic-engineering/"
+  - tag: "AI"
+    title: "From Mythos to Fable"
+    description: "Why frontier AI moving into workflows makes governance and readiness more important."
+    href: "../from-mythos-to-fable/"
 ---
 
 # ChatGPT Ads: What This Means for Marketing, Learning, and the Next Generation of Apprentices
 
-<section class="de-article-hero">
-  <div>
-    <div class="de-article-tags de-article-tags--hero" aria-label="Article tags">
-      <a href="../?tag=Marketing">Marketing</a>
-      <a href="../?tag=AI">AI</a>
-    </div>
-    <h1>ChatGPT Ads: What This Means for Marketing, Learning, and the Next Generation of Apprentices</h1>
-    <p>AI answers are becoming places where influence happens. That changes how brands are discovered, how learners make decisions, and how marketers earn trust.</p>
-    <div class="de-article-meta">
-      <a href="../../people/david-green/">David Green</a>
-      <span>5 June 2026</span>
-      <span>8 min read</span>
-    </div>
-  </div>
-  <aside>
-    <span class="de-pill">Big question</span>
-    <p>If an answer can also be an advert, how do we protect trust while teaching people to navigate influence?</p>
-  </aside>
-</section>
+{{ article_hero(page) }}
 
-<section class="de-article-summary">
-  <h2>Article Summary</h2>
-  <ul>
-    <li>AI answers are becoming commercial spaces where influence can happen inside the response.</li>
-    <li>Marketers will need to think beyond clicks, keywords, and traditional search journeys.</li>
-    <li>Learners need critical judgement so they can spot influence and protect trust.</li>
-  </ul>
-</section>
+{{ article_summary(page) }}
 
-<section class="de-article-takeaways">
-  <article>
-    <strong>The shift</strong>
-    <p>People are moving from searching through options to receiving direct AI answers.</p>
-  </article>
-  <article>
-    <strong>The tension</strong>
-    <p>Paid influence may become harder to spot when it is woven into helpful responses.</p>
-  </article>
-  <article>
-    <strong>The learning need</strong>
-    <p>Future marketers need visibility skills and critical judgement in equal measure.</p>
-  </article>
-</section>
+{{ article_takeaways(page) }}
 
 Death, taxes, and every major media platform eventually turning to advertising. Some things are just inevitable.
 
@@ -246,27 +239,6 @@ This is exactly why programmes like Estio’s **Digital Marketing and AI Executi
 
 The apprenticeship is designed to reflect the new reality of marketing. It combines traditional multi-channel marketing skills with emerging AI knowledge, whether that be advert implementation or the myriad of other ways that AI is transforming the marketing world.
 
-<section class="de-discussion-box">
-  <h2>Use This In A Discussion</h2>
-  <ul>
-    <li>How should sponsored AI recommendations be labelled?</li>
-    <li>What skills do future marketers need if AI tools shape discovery?</li>
-    <li>How can learners question AI answers without becoming cynical about everything?</li>
-  </ul>
-</section>
+{{ discussion_box(page) }}
 
-<section class="de-related-reading">
-  <h2>Related Reading</h2>
-  <div class="de-card-grid">
-    <a class="de-card" href="../agentic-engineering/">
-      <span class="de-card__label">AI</span>
-      <h3>Agentic Engineering</h3>
-      <p>Why AI moving from advice into workflows changes what learners need to know.</p>
-    </a>
-    <a class="de-card" href="../from-mythos-to-fable/">
-      <span class="de-card__label">AI</span>
-      <h3>From Mythos to Fable</h3>
-      <p>Why frontier AI moving into workflows makes governance and readiness more important.</p>
-    </a>
-  </div>
-</section>
+{{ related_reading(page) }}

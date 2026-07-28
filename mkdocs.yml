@@ -11,6 +11,12 @@ theme:
 hooks:
   - hooks/search_filter.py
 
+plugins:
+  - search
+  - macros:
+      module_name: hooks/article_macros
+      render_by_default: false
+
 markdown_extensions:
   - meta
 
