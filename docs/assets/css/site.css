@@ -207,20 +207,32 @@ body.de-modal-open {
 .de-kicker,
 .de-card__label,
 .de-pill,
-.de-content-label {
+.de-content-label,
+.de-role-route-grid span,
+.de-topic-browser span,
+.de-before-after span,
+.de-feature-list span:not(.de-card__label),
+.de-data-type-grid span,
+.de-difficulty {
   display: inline-flex;
-  align-items: center;
-  width: fit-content;
-  margin: 0 0 14px;
   padding: 2px 0 2px 9px;
   color: var(--de-bpp-purple);
   background: transparent;
   border-left: 3px solid var(--de-bpp-teal);
   border-radius: 0;
-  font-size: 0.76rem;
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 0.04em;
+}
+
+.de-kicker,
+.de-card__label,
+.de-pill,
+.de-content-label {
+  align-items: center;
+  width: fit-content;
+  margin: 0 0 14px;
+  font-size: 0.76rem;
   cursor: default;
 }
 
@@ -509,18 +521,9 @@ body.de-modal-open {
 .de-role-route-grid span,
 .de-topic-browser span,
 .de-before-after span {
-  display: inline-flex;
   width: fit-content;
   margin-bottom: 10px;
-  padding: 2px 0 2px 9px;
-  color: var(--de-bpp-purple);
-  background: transparent;
-  border-left: 3px solid var(--de-bpp-teal);
-  border-radius: 0;
   font-size: 0.76rem;
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
 }
 
 .de-role-route-grid strong {
@@ -698,18 +701,9 @@ body.de-modal-open {
 }
 
 .de-feature-list span:not(.de-card__label) {
-  display: inline-flex;
   width: fit-content;
   margin-bottom: 8px;
-  padding: 2px 0 2px 9px;
-  color: var(--de-bpp-purple);
-  background: transparent;
-  border-left: 3px solid var(--de-bpp-teal);
-  border-radius: 0;
   font-size: 0.74rem;
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
 }
 
 .de-feature-list h3,
@@ -1015,17 +1009,8 @@ body.de-modal-open {
 }
 
 .de-data-type-grid span {
-  display: inline-flex;
   margin-bottom: 10px;
-  padding: 2px 0 2px 9px;
-  color: var(--de-bpp-purple);
-  background: transparent;
-  border-left: 3px solid var(--de-bpp-teal);
-  border-radius: 0;
   font-size: 0.76rem;
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
 }
 
 .de-data-type-grid h3,
@@ -2594,18 +2579,9 @@ body.de-modal-open {
 }
 
 .de-difficulty {
-  display: inline-flex;
   width: fit-content;
   margin: 0 0 10px;
-  padding: 2px 0 2px 9px;
-  color: var(--de-bpp-purple);
-  background: transparent;
-  border-left: 3px solid var(--de-bpp-teal);
-  border-radius: 0;
   font-size: 0.75rem;
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
 }
 
 .de-difficulty--intermediate {
