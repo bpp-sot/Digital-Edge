@@ -13,6 +13,7 @@
   --de-coral: #e65f45;
   --de-gold: #f4b942;
   --de-blue: #2457a6;
+  --de-shadow-card: 0 10px 24px rgba(23, 33, 43, 0.05);
 }
 
 body {
@@ -506,7 +507,7 @@ body.de-modal-open {
   background: #ffffff;
   border: 1px solid var(--de-line);
   border-radius: 8px;
-  box-shadow: 0 10px 24px rgba(23, 33, 43, 0.05);
+  box-shadow: var(--de-shadow-card);
   text-decoration: none;
 }
 
@@ -546,7 +547,7 @@ body.de-modal-open {
   background: #ffffff;
   border: 1px solid var(--de-line);
   border-radius: 8px;
-  box-shadow: 0 10px 24px rgba(23, 33, 43, 0.05);
+  box-shadow: var(--de-shadow-card);
 }
 
 .de-topic-browser span {
@@ -598,7 +599,7 @@ body.de-modal-open {
   border: 1px solid var(--de-line);
   border-left: 6px solid var(--de-teal);
   border-radius: 8px;
-  box-shadow: 0 10px 24px rgba(23, 33, 43, 0.05);
+  box-shadow: var(--de-shadow-card);
 }
 
 .de-article-summary h2,
@@ -620,7 +621,7 @@ body.de-modal-open {
   border: 1px solid var(--de-line);
   border-left: 6px solid var(--de-teal);
   border-radius: 8px;
-  box-shadow: 0 10px 24px rgba(23, 33, 43, 0.05);
+  box-shadow: var(--de-shadow-card);
 }
 
 .de-key-term strong {
@@ -654,7 +655,7 @@ body.de-modal-open {
   background: #ffffff;
   border: 1px solid var(--de-line);
   border-radius: 8px;
-  box-shadow: 0 10px 24px rgba(23, 33, 43, 0.05);
+  box-shadow: var(--de-shadow-card);
 }
 
 .de-before-after article:nth-child(2) {
@@ -687,7 +688,7 @@ body.de-modal-open {
   border: 1px solid var(--de-line);
   border-left: 5px solid var(--de-coral);
   border-radius: 8px;
-  box-shadow: 0 10px 24px rgba(23, 33, 43, 0.05);
+  box-shadow: var(--de-shadow-card);
   text-decoration: none;
   transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
 }
@@ -736,7 +737,7 @@ body.de-modal-open {
   border: 1px solid var(--de-line);
   border-left: 5px solid var(--de-bpp-purple);
   border-radius: 8px;
-  box-shadow: 0 10px 24px rgba(23, 33, 43, 0.05);
+  box-shadow: var(--de-shadow-card);
 }
 
 .de-content-type-guide p {
@@ -1005,7 +1006,7 @@ body.de-modal-open {
   background: #ffffff;
   border: 1px solid var(--de-line);
   border-radius: 8px;
-  box-shadow: 0 10px 24px rgba(23, 33, 43, 0.05);
+  box-shadow: var(--de-shadow-card);
 }
 
 .de-data-type-grid span {
@@ -1265,7 +1266,7 @@ body.de-modal-open {
   background: #ffffff;
   border: 1px solid var(--de-line);
   border-radius: 8px;
-  box-shadow: 0 10px 24px rgba(23, 33, 43, 0.05);
+  box-shadow: var(--de-shadow-card);
 }
 
 .de-article-takeaways strong,
@@ -1533,7 +1534,7 @@ body.de-modal-open {
   background: #ffffff;
   border: 1px solid var(--de-line);
   border-radius: 8px;
-  box-shadow: 0 10px 24px rgba(23, 33, 43, 0.05);
+  box-shadow: var(--de-shadow-card);
 }
 
 .de-article-pattern-grid h3,
@@ -1754,7 +1755,7 @@ body.de-modal-open {
   border: 1px solid var(--de-line);
   border-top: 4px solid var(--de-bpp-teal);
   border-radius: 8px;
-  box-shadow: 0 10px 24px rgba(23, 33, 43, 0.05);
+  box-shadow: var(--de-shadow-card);
 }
 
 .de-person-card__header {
@@ -1845,7 +1846,7 @@ body.de-modal-open {
   border: 1px solid var(--de-line);
   border-left: 6px solid var(--de-bpp-purple);
   border-radius: 8px;
-  box-shadow: 0 10px 24px rgba(23, 33, 43, 0.05);
+  box-shadow: var(--de-shadow-card);
 }
 
 .de-people-note h2,
@@ -1954,7 +1955,7 @@ body.de-modal-open {
   background: #ffffff;
   border: 1px solid var(--de-line);
   border-radius: 8px;
-  box-shadow: 0 10px 24px rgba(23, 33, 43, 0.05);
+  box-shadow: var(--de-shadow-card);
 }
 
 .de-podcast-card h3 {
@@ -2063,7 +2064,7 @@ body.de-modal-open {
   background: #ffffff;
   border: 1px solid var(--de-line);
   border-radius: 8px;
-  box-shadow: 0 10px 24px rgba(23, 33, 43, 0.05);
+  box-shadow: var(--de-shadow-card);
   text-align: left;
   cursor: pointer;
   transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
@@ -2160,7 +2161,7 @@ body.de-modal-open {
   background: #ffffff;
   border: 1px solid var(--de-line);
   border-radius: 8px;
-  box-shadow: 0 10px 24px rgba(23, 33, 43, 0.05);
+  box-shadow: var(--de-shadow-card);
 }
 
 .de-event-archive h3 {
@@ -2413,7 +2414,7 @@ body.de-modal-open {
   background: #ffffff;
   border: 1px solid var(--de-line);
   border-radius: 8px;
-  box-shadow: 0 10px 24px rgba(23, 33, 43, 0.05);
+  box-shadow: var(--de-shadow-card);
 }
 
 .de-news-stats span,
@@ -2497,7 +2498,7 @@ body.de-modal-open {
   background: #ffffff;
   border: 1px solid var(--de-line);
   border-radius: 8px;
-  box-shadow: 0 10px 24px rgba(23, 33, 43, 0.05);
+  box-shadow: var(--de-shadow-card);
 }
 
 .de-news-section blockquote {
