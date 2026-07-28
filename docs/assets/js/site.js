@@ -470,6 +470,15 @@
     window.setTimeout(() => element.focus({ preventScroll: false }), 0);
   }
 
+  function shuffled(items) {
+    const result = [...items];
+    for (let i = result.length - 1; i > 0; i -= 1) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [result[i], result[j]] = [result[j], result[i]];
+    }
+    return result;
+  }
+
   function focusActivityResult(container) {
     const result = container.querySelector(".de-guide-activity__result, .de-bias-game__result");
     if (!result) return;
@@ -1713,15 +1722,6 @@
       }
     };
 
-    function shuffled(items) {
-      const result = [...items];
-      for (let i = result.length - 1; i > 0; i -= 1) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [result[i], result[j]] = [result[j], result[i]];
-      }
-      return result;
-    }
-
     document.querySelectorAll("[data-choice-activity]").forEach((activity) => {
       const config = configs[activity.dataset.choiceActivity];
       const start = activity.querySelector("[data-activity-start]");
@@ -2200,15 +2200,6 @@
     let choicesWrap = null;
     let feedback = null;
     let next = null;
-
-    function shuffled(items) {
-      const result = [...items];
-      for (let i = result.length - 1; i > 0; i -= 1) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [result[i], result[j]] = [result[j], result[i]];
-      }
-      return result;
-    }
 
     function startActivity() {
       index = 0;
