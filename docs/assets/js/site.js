@@ -529,6 +529,56 @@
       return items.map((item) => `<button type="button" class="${className}" data-value="${escapeHTML(item.key)}">${escapeHTML(item.label)}</button>`).join("");
     }
 
+    // Shared by the "build or reorder a sequence, then check position-by-position"
+    // widgets (git-timeline, api-flow). mode: "reorder" starts with the full list
+    // pre-populated and lets the learner move items with up/down buttons; mode:
+    // "append" starts empty and builds the list in click order from a card pile.
+    function installSequenceActivity(selector, config) {
+      bindStart(selector, (activity) => {
+        const isReorder = config.mode === "reorder";
+        const acquisitionMarkup = isReorder
+          ? `<ol class="de-sim-timeline" data-sequence-list>${config.items.map((item) => `<li><button type="button" class="de-sim-card" data-sequence-item>${escapeHTML(item)}</button></li>`).join("")}</ol>`
+          : `
+            <div class="de-sim-flow" data-sequence-list></div>
+            <div class="de-sim-card-pile">${config.items.map((item) => `<button type="button" class="de-sim-card" data-sequence-source="${escapeHTML(item)}">${escapeHTML(item)}</button>`).join("")}</div>
+          `;
+        const reorderButtons = isReorder
+          ? `<button type="button" class="de-guide-activity__secondary" data-up>Move up</button><button type="button" class="de-guide-activity__secondary" data-down>Move down</button>`
+          : "";
+
+        renderActivityShell(activity, config.title, config.intro, config.badge, `
+          ${acquisitionMarkup}
+          <div class="de-guide-activity__actions">${reorderButtons}<button type="button" class="de-guide-activity__primary" data-check>Check ${config.checkLabel}</button></div>
+          <div class="de-guide-activity__feedback" data-feedback hidden></div>
+        `);
+
+        if (isReorder) {
+          let selected = null;
+          activity.querySelectorAll("[data-sequence-item]").forEach((button) => button.addEventListener("click", () => {
+            selected = button.closest("li");
+            activity.querySelectorAll("[data-sequence-item]").forEach((item) => item.classList.toggle("is-selected", item === button));
+          }));
+          activity.querySelector("[data-up]").addEventListener("click", () => { if (selected && selected.previousElementSibling) selected.parentNode.insertBefore(selected, selected.previousElementSibling); });
+          activity.querySelector("[data-down]").addEventListener("click", () => { if (selected && selected.nextElementSibling) selected.parentNode.insertBefore(selected.nextElementSibling, selected); });
+        } else {
+          const list = activity.querySelector("[data-sequence-list]");
+          activity.querySelectorAll("[data-sequence-source]").forEach((button) => button.addEventListener("click", () => {
+            list.insertAdjacentHTML("beforeend", `<span data-sequence-item="${button.dataset.sequenceSource}">${button.dataset.sequenceSource}</span>`);
+            button.disabled = true;
+          }));
+        }
+
+        activity.querySelector("[data-check]").addEventListener("click", () => {
+          const current = isReorder
+            ? Array.from(activity.querySelectorAll("[data-sequence-item]")).map((button) => button.textContent)
+            : Array.from(activity.querySelectorAll("[data-sequence-item]")).map((item) => item.dataset.sequenceItem);
+          const correct = config.correct || config.items;
+          const score = current.filter((item, index) => item === correct[index]).length;
+          showActivityFeedback(activity.querySelector("[data-feedback]"), config.feedback(score, correct.length));
+        });
+      });
+    }
+
     bindStart("[data-task-triage-board]", (activity) => {
       const cards = [
         { id: "criteria", text: "Find the assessment criteria", answer: "now" },
@@ -1000,26 +1050,15 @@
       startWorkshop();
     });
 
-    bindStart("[data-git-timeline]", (activity) => {
-      const steps = ["git status", "git add README.md", "git push", "git diff", "git commit -m \"Update README\""];
-      const correct = ["git status", "git diff", "git add README.md", "git commit -m \"Update README\"", "git push"];
-      renderActivityShell(activity, "Commit Timeline", "Move the commands into a safer order, then mark the mistake in the original timeline.", "Git recovery", `
-        <ol class="de-sim-timeline" data-timeline>${steps.map((step) => `<li><button type="button" class="de-sim-card" data-step>${escapeHTML(step)}</button></li>`).join("")}</ol>
-        <div class="de-guide-activity__actions"><button type="button" class="de-guide-activity__secondary" data-up>Move up</button><button type="button" class="de-guide-activity__secondary" data-down>Move down</button><button type="button" class="de-guide-activity__primary" data-check>Check timeline</button></div>
-        <div class="de-guide-activity__feedback" data-feedback hidden></div>
-      `);
-      let selected = null;
-      activity.querySelectorAll("[data-step]").forEach((button) => button.addEventListener("click", () => {
-        selected = button.closest("li");
-        activity.querySelectorAll("[data-step]").forEach((step) => step.classList.toggle("is-selected", step === button));
-      }));
-      activity.querySelector("[data-up]").addEventListener("click", () => { if (selected && selected.previousElementSibling) selected.parentNode.insertBefore(selected, selected.previousElementSibling); });
-      activity.querySelector("[data-down]").addEventListener("click", () => { if (selected && selected.nextElementSibling) selected.parentNode.insertBefore(selected.nextElementSibling, selected); });
-      activity.querySelector("[data-check]").addEventListener("click", () => {
-        const current = Array.from(activity.querySelectorAll("[data-step]")).map((button) => button.textContent);
-        const score = current.filter((step, index) => step === correct[index]).length;
-        showActivityFeedback(activity.querySelector("[data-feedback]"), `<strong>${score}/${correct.length} commands are in safe order.</strong><p>The mistake was pushing before inspecting the diff and committing the staged work.</p>`);
-      });
+    installSequenceActivity("[data-git-timeline]", {
+      mode: "reorder",
+      title: "Commit Timeline",
+      intro: "Move the commands into a safer order, then mark the mistake in the original timeline.",
+      badge: "Git recovery",
+      checkLabel: "timeline",
+      items: ["git status", "git add README.md", "git push", "git diff", "git commit -m \"Update README\""],
+      correct: ["git status", "git diff", "git add README.md", "git commit -m \"Update README\"", "git push"],
+      feedback: (score, total) => `<strong>${score}/${total} commands are in safe order.</strong><p>The mistake was pushing before inspecting the diff and committing the staged work.</p>`
     });
 
     bindStart("[data-method-interview]", (activity) => {
@@ -1312,24 +1351,14 @@
       startDecisionBrief();
     });
 
-    bindStart("[data-api-flow]", (activity) => {
-      const parts = ["Client", "Endpoint", "Method", "Authentication", "Payload", "Response"];
-      renderActivityShell(activity, "API Conversation Builder", "Build the API flow in order from request to response.", "System flow", `
-        <div class="de-sim-flow" data-flow></div>
-        <div class="de-sim-card-pile">${parts.map((part) => `<button type="button" class="de-sim-card" data-part="${part}">${part}</button>`).join("")}</div>
-        <div class="de-guide-activity__actions"><button type="button" class="de-guide-activity__primary" data-check>Check flow</button></div>
-        <div class="de-guide-activity__feedback" data-feedback hidden></div>
-      `);
-      const flow = activity.querySelector("[data-flow]");
-      activity.querySelectorAll("[data-part]").forEach((button) => button.addEventListener("click", () => {
-        flow.insertAdjacentHTML("beforeend", `<span data-flow-part="${button.dataset.part}">${button.dataset.part}</span>`);
-        button.disabled = true;
-      }));
-      activity.querySelector("[data-check]").addEventListener("click", () => {
-        const current = Array.from(activity.querySelectorAll("[data-flow-part]")).map((item) => item.dataset.flowPart);
-        const score = current.filter((part, index) => part === parts[index]).length;
-        showActivityFeedback(activity.querySelector("[data-feedback]"), `<strong>${score}/${parts.length} flow parts are in order.</strong><p>An API conversation starts with a client calling an endpoint with a method, permission, data, and response.</p>`);
-      });
+    installSequenceActivity("[data-api-flow]", {
+      mode: "append",
+      title: "API Conversation Builder",
+      intro: "Build the API flow in order from request to response.",
+      badge: "System flow",
+      checkLabel: "flow",
+      items: ["Client", "Endpoint", "Method", "Authentication", "Payload", "Response"],
+      feedback: (score, total) => `<strong>${score}/${total} flow parts are in order.</strong><p>An API conversation starts with a client calling an endpoint with a method, permission, data, and response.</p>`
     });
 
     bindStart("[data-bug-detective]", (activity) => {
