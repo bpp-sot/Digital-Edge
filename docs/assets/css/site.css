@@ -152,8 +152,8 @@ body.de-modal-open {
 /* Every page-type hero (home, article, people, profile, news, events,
    podcast) shares this surface styling and, where the layout matches, the
    same grid. Each selector below only carries what's actually unique to it
-   (its gradient, and any margin/shadow/grid values that genuinely differ) —
-   see the two follow-up rules below for the narrower groupings. Adding a new
+   (its gradient, and any margin/shadow/grid values that genuinely differ).
+   See the two follow-up rules below for the narrower groupings. Adding a new
    hero variant? Add it to whichever of these three rules its values match,
    don't copy a whole new block. */
 .de-hero,
@@ -217,7 +217,7 @@ body.de-modal-open {
 }
 
 /* The shared base of the "uppercase pill" label used across the site. These
-   selectors deliberately do NOT all match on margin/font-size/align-items —
+   selectors deliberately do NOT all match on margin/font-size/align-items:
    those genuinely differ per component and stay declared on each one below.
    Don't fold a differing value in here just to reduce lines; verify the
    value actually matches everywhere first (see git history for what that
