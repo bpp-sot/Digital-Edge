@@ -1,3 +1,14 @@
+"""MkDocs build hook: regex-based HTML post-processing, not a templating layer.
+
+Registered via `hooks:` in mkdocs.yml, this runs alongside (not instead of)
+mkdocs-macros-plugin. It handles things macros can't reach cleanly because
+they act on other pages' content or on the built site itself: pulling the
+newest article into the homepage/articles-index feature slots, reordering
+the People cards by each author's most recent article, stripping the
+(deliberately unpublished) guides/ section from search and the sitemap after
+build, and adding Open Graph/Twitter meta tags per page.
+"""
+
 from __future__ import annotations
 
 import json
@@ -11,6 +22,9 @@ from xml.etree import ElementTree
 
 
 EXCLUDED_LOCATIONS = {""}
+# The guides/ section is still authored in docs/ but not published: on_post_build
+# deletes its built HTML, search entries, and sitemap URLs. Add a prefix here to
+# hide another section the same way without deleting its source content.
 HIDDEN_LOCATION_PREFIXES = (
     "guides/",
 )
@@ -200,6 +214,9 @@ def parse_frontmatter(text: str) -> dict[str, str]:
 
 
 def latest_article(config) -> dict[str, str] | None:
+    # Reads frontmatter straight off disk rather than going through mkdocs' Page
+    # objects, so this can run for on_page_markdown on index.md before the other
+    # article pages have necessarily been processed yet. "Latest" = max(date).
     articles_dir = Path(config.docs_dir) / "articles"
     if not articles_dir.exists():
         return None
@@ -325,6 +342,7 @@ def reorder_person_cards(markdown: str, config) -> str:
     if not cards:
         return markdown
 
+    # Authors with no article yet sort to the end rather than being dropped.
     no_article = datetime.min.replace(tzinfo=timezone.utc)
 
     def sort_key(card: str) -> datetime:

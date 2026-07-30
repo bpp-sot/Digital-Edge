@@ -1,3 +1,7 @@
+/* --de-* custom properties are this stylesheet's design tokens: brand colours
+   and repeated visual values (e.g. --de-shadow-card) live here so a value
+   used in more than one place is defined once. When adding a new value that
+   already appears elsewhere, add/reuse a token here instead of copying it. */
 :root {
   --de-ink: #17212b;
   --de-muted: #546171;
@@ -145,6 +149,13 @@ body.de-modal-open {
   max-width: 1180px;
 }
 
+/* Every page-type hero (home, article, people, profile, news, events,
+   podcast) shares this surface styling and, where the layout matches, the
+   same grid. Each selector below only carries what's actually unique to it
+   (its gradient, and any margin/shadow/grid values that genuinely differ) —
+   see the two follow-up rules below for the narrower groupings. Adding a new
+   hero variant? Add it to whichever of these three rules its values match,
+   don't copy a whole new block. */
 .de-hero,
 .de-article-hero,
 .de-article-index-hero,
@@ -205,6 +216,12 @@ body.de-modal-open {
   letter-spacing: 0;
 }
 
+/* The shared base of the "uppercase pill" label used across the site. These
+   selectors deliberately do NOT all match on margin/font-size/align-items —
+   those genuinely differ per component and stay declared on each one below.
+   Don't fold a differing value in here just to reduce lines; verify the
+   value actually matches everywhere first (see git history for what that
+   verification looked like). */
 .de-kicker,
 .de-card__label,
 .de-pill,

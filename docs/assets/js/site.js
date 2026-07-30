@@ -1,3 +1,13 @@
+// Loaded directly via mkdocs' extra_javascript, no bundler/module system — every
+// installX() below runs in this one shared closure and is wired up at the bottom
+// of the file (DOMContentLoaded or immediately, depending on document.readyState).
+//
+// Guide-page "practice" widgets share a common shell/feedback pattern:
+// renderActivityShell() builds the shell markup, showActivityFeedback() reveals
+// the result. A new widget should reuse these rather than hand-building its own
+// shell — see installSequenceActivity() for a widget built entirely on shared
+// helpers, and installDistinctGuideActivities() for the (larger, more varied)
+// set of one-off widgets that predate the shared engine pattern.
 (function () {
   function installSearchPolish(attemptsLeft) {
     if (typeof window.displayResults !== "function") {
@@ -486,6 +496,10 @@
     window.setTimeout(() => result.focus({ preventScroll: false }), 0);
   }
 
+  // The XSS boundary for any dynamic text these widgets interpolate into
+  // innerHTML (config strings are static today, but activity state built from
+  // user interaction — e.g. values echoed back into a rendered scenario —
+  // must go through this before it's templated into markup).
   function escapeHTML(value) {
     return String(value).replace(/[&<>"']/g, (character) => ({
       "&": "&amp;",
