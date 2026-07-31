@@ -199,16 +199,16 @@
 ## Off The Job: Staff Spotlight
 
 <div class="de-news-feature-grid">
-  <article>
+  <a class="de-card" href="../staff-spotlight-sarah-monk/">
     <span class="de-card__label">Coach</span>
     <h3>Sarah Monk</h3>
     <p>ICT coach supporting learners with varied technical knowledge, learning needs, and workplace contexts.</p>
-  </article>
-  <article>
+  </a>
+  <a class="de-card" href="../staff-spotlight-jordan-whitworth/">
     <span class="de-card__label">Recruitment</span>
     <h3>Jordan Whitworth</h3>
     <p>Recruitment consultant apprenticeship coach who enjoys helping candidates find opportunities that can shape their careers.</p>
-  </article>
+  </a>
 </div>
 
 <details class="de-expand-box">

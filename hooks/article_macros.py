@@ -1,8 +1,9 @@
-"""Jinja macros (via mkdocs-macros-plugin) for the repeated article chrome.
+"""Jinja macros (via mkdocs-macros-plugin) for repeated page chrome.
 
-Each article's YAML frontmatter carries the hero/summary/takeaways/discussion/
-related-reading data; these macros render it to the same HTML that used to be
-hand-copied into every article markdown file. Only pages with
+Each page's YAML frontmatter carries the structured data (hero/summary/
+takeaways/discussion/related-reading for articles, name/role/Q&A for staff
+spotlights); these macros render it to HTML that would otherwise be
+hand-copied into every markdown file of that type. Only pages with
 `render_macros: true` in their frontmatter are rendered (see
 render_by_default: false in mkdocs.yml), so nothing else on the site is
 affected.
@@ -95,4 +96,53 @@ def define_env(env) -> None:
   <div class="de-card-grid">
 {cards}
   </div>
+</section>"""
+
+    @env.macro
+    def spotlight_hero(page) -> str:
+        meta = page.meta
+        return f"""<section class="de-news-hero">
+  <div>
+    <p class="de-kicker">{meta.get("kicker", "Off The Job: Staff Spotlight")}</p>
+    <h1>{meta.get("name", "")}</h1>
+    <p>{meta.get("role", "")}</p>
+  </div>
+  <aside>
+    <span class="de-pill">In their own words</span>
+    <p>{meta.get("hero_quote", "")}</p>
+  </aside>
+</section>"""
+
+    @env.macro
+    def spotlight_quickfire(page) -> str:
+        items = page.meta.get("quickfire", [])
+        tiles = "\n".join(
+            f"""    <div class="de-spotlight-quickfire__item">
+      <span>{item["question"]}</span>
+      <p>{item["answer"]}</p>
+    </div>"""
+            for item in items
+        )
+
+        return f"""<section class="de-spotlight-quickfire" aria-label="Quick fire round">
+  <h2>Quick Fire Round</h2>
+  <div class="de-spotlight-quickfire__grid">
+{tiles}
+  </div>
+</section>"""
+
+    @env.macro
+    def spotlight_interview(page) -> str:
+        items = page.meta.get("interview", [])
+        entries = "\n".join(
+            f"""  <div class="de-spotlight-interview__item">
+    <h3>{item["question"]}</h3>
+    {"".join(f"<p>{paragraph.strip()}</p>" for paragraph in item["answer"].strip().split("\n\n"))}
+  </div>"""
+            for item in items
+        )
+
+        return f"""<section class="de-spotlight-interview">
+  <h2>The Interview</h2>
+{entries}
 </section>"""
