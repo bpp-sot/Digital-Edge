@@ -139,3 +139,47 @@ def test_related_reading_renders_cards():
     assert '<span class="de-card__label">AI</span>' in html
     assert "<h3>Title1</h3>" in html
     assert "<p>Desc1</p>" in html
+
+
+def test_spotlight_hero_renders_name_role_kicker_and_pulled_quote():
+    macros = load_macros()
+    page = make_page({"name": "Test Person", "role": "Test Role", "hero_quote": "A pulled quote."})
+
+    html = macros["spotlight_hero"](page)
+
+    assert '<p class="de-kicker">Off The Job: Staff Spotlight</p>' in html
+    assert "<h1>Test Person</h1>" in html
+    assert "<p>Test Role</p>" in html
+    assert '<span class="de-pill">In their own words</span>' in html
+    assert "<p>A pulled quote.</p>" in html
+
+
+def test_spotlight_quickfire_renders_question_answer_tiles():
+    macros = load_macros()
+    page = make_page({"quickfire": [{"question": "Ultimate meal", "answer": "Pizza."}]})
+
+    html = macros["spotlight_quickfire"](page)
+
+    assert "<h2>Quick Fire Round</h2>" in html
+    assert "<span>Ultimate meal</span>" in html
+    assert "<p>Pizza.</p>" in html
+
+
+def test_spotlight_interview_renders_single_paragraph_answer():
+    macros = load_macros()
+    page = make_page({"interview": [{"question": "Q1?", "answer": "One paragraph."}]})
+
+    html = macros["spotlight_interview"](page)
+
+    assert "<h2>The Interview</h2>" in html
+    assert "<h3>Q1?</h3>" in html
+    assert "<p>One paragraph.</p>" in html
+
+
+def test_spotlight_interview_splits_multi_paragraph_answer_into_separate_p_tags():
+    macros = load_macros()
+    page = make_page({"interview": [{"question": "Q1?", "answer": "First paragraph.\n\nSecond paragraph."}]})
+
+    html = macros["spotlight_interview"](page)
+
+    assert "<p>First paragraph.</p><p>Second paragraph.</p>" in html
