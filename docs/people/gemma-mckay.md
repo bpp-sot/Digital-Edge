@@ -3,29 +3,29 @@
 <section class="de-profile-hero">
   <div>
     <p class="de-kicker">Author profile</p>
-    <h1>Gemma McKay</h1>
-    <p class="de-profile-role">Head of Programmes, Level 7 Masters Data Science and Software Engineering</p>
-    <p>Gemma leads the Level 7 Masters Data Science and Software Engineering degree apprenticeship programmes at BPP University's School of Technology, and writes about sustainable technology, green computing, and the environmental impact of the systems we build.</p>
+    <h1>Gemma McKay, MSc SFHEA</h1>
+    <p class="de-profile-role">Level 7 Award Lead and Head of Programmes, Data Science and Software Engineering Degree Apprenticeships</p>
+    <p>Gemma leads the Level 7 Masters Data Science and Software Engineering degree apprenticeship programmes at BPP University's School of Technology. Her writing explores AI, women in technology, leadership, sustainable innovation, and the skills needed to thrive in an evolving digital landscape.</p>
   </div>
 </section>
 
 ## Subject Areas
 
 <div class="de-subject-tags" aria-label="Subject areas">
-  <span>Sustainable technology</span>
-  <span>Green computing</span>
-  <span>Data science</span>
-  <span>Software engineering</span>
-  <span>Responsible innovation</span>
+  <span>AI</span>
+  <span>Women in technology</span>
+  <span>Leadership</span>
+  <span>Sustainable innovation</span>
+  <span>Future skills</span>
 </div>
 
 ## Biography
 
-Gemma McKay is Head of Programmes for the Level 7 Masters Data Science and Software Engineering degree apprenticeship programmes at BPP University's School of Technology.
+Gemma McKay is an experienced technology leader and data scientist, leading the Level 7 Data Science and Software Engineering degree apprenticeship programmes at BPP University's School of Technology. She works with apprentices, employers and academic teams to develop technical expertise alongside the leadership, communication and professional skills needed to succeed in a rapidly changing technology landscape.
 
-Gemma delivers BPP Masterclasses on sustainable technology and green computing, exploring how data centres, devices, and AI systems rely on real infrastructure, energy, and water, and what that means for anyone designing systems, leading digital transformation, or shaping how emerging technologies are adopted within organisations.
+Her writing focuses on women in technology, AI, leadership, sustainable innovation and the future skills required for careers in data and software engineering. She is particularly interested in creating more inclusive pathways into technology, supporting diverse talent, and helping professionals navigate technological change with confidence.
 
-Gemma believes sustainability is not separate from technical expertise. It's increasingly part of what it means to be a responsible tech professional.
+Gemma believes successful technology adoption relies on both technical capability and human-centred leadership. She advocates for responsible innovation, lifelong learning and inclusive cultures that enable people and organisations to realise the benefits of emerging technologies.
 
 ## Digital Edge Articles
 

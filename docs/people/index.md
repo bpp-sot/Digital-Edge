@@ -86,14 +86,14 @@
       <span class="de-person-card__initials" aria-hidden="true">GM</span>
       <div>
         <a class="de-person-card__name" href="gemma-mckay/">Gemma McKay</a>
-        <p class="de-person-card__role">Head of Programmes, Data Science &amp; Software Engineering</p>
+        <p class="de-person-card__role">Level 7 Award Lead and Head of Programmes, Data Science &amp; Software Engineering</p>
       </div>
     </div>
-    <p>Sustainable technology, green computing, data science, and software engineering, translating environmental impact into practical professional judgement.</p>
+    <p>AI, women in technology, leadership, and sustainable innovation, exploring the skills needed to thrive in an evolving digital landscape.</p>
     <div class="de-person-card__topics" aria-label="Gemma McKay subject areas">
-      <span>Sustainability</span>
-      <span>Green computing</span>
-      <span>Data science</span>
+      <span>AI</span>
+      <span>Women in tech</span>
+      <span>Leadership</span>
     </div>
     <a class="de-person-card__cta" href="gemma-mckay/">View profile</a>
   </article>
