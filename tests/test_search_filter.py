@@ -123,3 +123,35 @@ class TestFeaturedArticleFallback:
 
         assert "Newest Article" in card
         assert "articles/new/" in card
+
+
+class TestOnPostBuildExternalLinks:
+    def test_adds_new_tab_attributes_to_known_external_links(self, tmp_path):
+        site_dir = tmp_path / "site"
+        site_dir.mkdir()
+        (site_dir / "index.html").write_text(
+            f'<a href="{search_filter.SPOTIFY_URL}">Podcast</a>'
+            f'<a href="{search_filter.VIRTUAL_CAMPUS_URL}">Virtual Campus</a>'
+            '<a href="/people/">People</a>',
+            encoding="utf-8",
+        )
+
+        search_filter.on_post_build(SimpleNamespace(site_dir=str(site_dir)))
+
+        html = (site_dir / "index.html").read_text(encoding="utf-8")
+        assert f'<a href="{search_filter.SPOTIFY_URL}" target="_blank" rel="noopener noreferrer">' in html
+        assert f'<a href="{search_filter.VIRTUAL_CAMPUS_URL}" target="_blank" rel="noopener noreferrer">' in html
+        assert '<a href="/people/">People</a>' in html
+
+    def test_does_not_duplicate_attributes_if_already_present(self, tmp_path):
+        site_dir = tmp_path / "site"
+        site_dir.mkdir()
+        already_tagged = (
+            f'<a href="{search_filter.SPOTIFY_URL}" target="_blank" rel="noopener noreferrer">Podcast</a>'
+        )
+        (site_dir / "index.html").write_text(already_tagged, encoding="utf-8")
+
+        search_filter.on_post_build(SimpleNamespace(site_dir=str(site_dir)))
+
+        html = (site_dir / "index.html").read_text(encoding="utf-8")
+        assert html.count("target=") == 1

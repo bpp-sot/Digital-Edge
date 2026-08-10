@@ -29,6 +29,8 @@ HIDDEN_LOCATION_PREFIXES = (
     "guides/",
 )
 SPOTIFY_URL = "https://open.spotify.com/show/4wLAuGMARmMNMvqGnR9iQy"
+VIRTUAL_CAMPUS_URL = "https://community.bpp.com/home"
+EXTERNAL_NEW_TAB_URLS = (SPOTIFY_URL, VIRTUAL_CAMPUS_URL)
 FEATURED_EVENT_PATTERN = re.compile(
     r"<!-- de-feature-event:start -->.*?<!-- de-feature-event:end -->",
     re.DOTALL,
@@ -420,15 +422,16 @@ def on_post_build(config, **kwargs) -> None:
     for html_path in site_dir.rglob("*.html"):
         html = html_path.read_text(encoding="utf-8")
 
-        spotify_link = f'<a href="{SPOTIFY_URL}"'
-        if spotify_link in html:
-            html = html.replace(
-                spotify_link,
-                f'{spotify_link} target="_blank" rel="noopener noreferrer"',
-            )
-            html = html.replace(
-                'target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer"',
-                'target="_blank" rel="noopener noreferrer"',
-            )
+        for url in EXTERNAL_NEW_TAB_URLS:
+            link_prefix = f'<a href="{url}"'
+            if link_prefix in html:
+                html = html.replace(
+                    link_prefix,
+                    f'{link_prefix} target="_blank" rel="noopener noreferrer"',
+                )
+                html = html.replace(
+                    'target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer"',
+                    'target="_blank" rel="noopener noreferrer"',
+                )
 
         html_path.write_text(html, encoding="utf-8")

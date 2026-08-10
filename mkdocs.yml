@@ -27,6 +27,7 @@ nav:
   - Community News: community-news/index.md
   - People: people/index.md
   - Tech Sphere Podcast: podcast.md
+  - BPP Virtual Campus: https://community.bpp.com/home
 
 extra_css:
   - assets/css/site.css
