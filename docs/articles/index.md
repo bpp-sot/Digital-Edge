@@ -39,6 +39,17 @@
 </div>
 
 <div class="de-article-list">
+  <article class="de-article-card" data-article-tags="AI,Careers" data-article-author="Catherine Hatfield">
+    <div class="de-article-tags" aria-label="Article tags">
+      <button type="button" data-article-tag="AI">AI</button>
+      <button type="button" data-article-tag="Careers">Careers</button>
+    </div>
+    <a class="de-article-card__link" href="digital-edge-debate-is-your-data-for-sale/">
+      <h3>Digital Edge Debates: Is Your Data for Sale?</h3>
+      <p>Two apprentice teams went head-to-head on whether companies should be allowed to monetise user data. The audience vote came down to 55% to 45%.</p>
+    </a>
+    <p class="de-byline">By <a href="../people/catherine-hatfield/" data-author-filter="Catherine Hatfield">Catherine Hatfield</a> · 5 August 2026</p>
+  </article>
   <article class="de-article-card" data-article-tags="Careers,Marketing" data-article-author="Catherine Hatfield">
     <div class="de-article-tags" aria-label="Article tags">
       <button type="button" data-article-tag="Careers">Careers</button>
