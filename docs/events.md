@@ -25,30 +25,6 @@
   <button
     class="de-event-card"
     type="button"
-    data-event-filter-key="debate"
-    data-event-title="Is Your Data Up for Sale?"
-    data-event-type="Digital Edge Debate"
-    data-event-status="Upcoming"
-    data-event-date="Wednesday 30 July 2026"
-    data-event-time="12:00-13:00"
-    data-event-start="2026-07-30T12:00:00+01:00"
-    data-event-end="2026-07-30T13:00:00+01:00"
-    data-event-location="Online"
-    data-event-description="Watch two apprentice teams go head-to-head, challenge assumptions, spark big ideas, and put their communication and critical-thinking skills to the test by debating: should companies be allowed to monetise user data?"
-    data-event-audience="Learners and apprentices interested in digital ethics, communication, critical thinking, and the business of user data."
-  >
-    <div class="de-event-tags">
-      <span class="de-event-type de-event-type--debate">Debate</span>
-      <span class="de-event-status de-event-status--upcoming">Upcoming</span>
-    </div>
-    <strong>Digital Edge: Debates - Is Your Data Up for Sale?</strong>
-    <span>Wednesday 30 July 2026 · 12:00-13:00</span>
-    <p>Two apprentice teams debate whether companies should be allowed to monetise user data.</p>
-  </button>
-
-  <button
-    class="de-event-card"
-    type="button"
     data-event-filter-key="performance"
     data-event-title="Emotional Intelligence"
     data-event-type="Performance & Impact Session"
@@ -295,6 +271,29 @@
   </div>
 
 <div class="de-event-grid" aria-label="Past Digital Edge events">
+  <button
+    class="de-event-card de-event-card--past"
+    type="button"
+    data-event-filter-key="debate"
+    data-event-title="Is Your Data Up for Sale?"
+    data-event-type="Digital Edge Debate"
+    data-event-status="Past"
+    data-event-date="Wednesday 30 July 2026"
+    data-event-time="12:00-13:00"
+    data-event-location="Online"
+    data-event-description="This past debate saw two apprentice teams go head-to-head, challenging assumptions and putting their communication and critical-thinking skills to the test, debating whether companies should be allowed to monetise user data."
+    data-event-audience="Learners and apprentices interested in digital ethics, communication, critical thinking, and the business of user data."
+    data-event-takeaways="Team 2 won the audience vote 55% to 45%, arguing that user data should not be monetised.|Arguments centred on informed consent, internet accessibility, and the Cambridge Analytica scandal.|The full debate will be available on the Techsphere podcast on Spotify from 17 August."
+  >
+    <div class="de-event-tags">
+      <span class="de-event-type de-event-type--debate">Debate</span>
+      <span class="de-event-status de-event-status--past">Past</span>
+    </div>
+    <strong>Digital Edge: Debates - Is Your Data Up for Sale?</strong>
+    <span>Wednesday 30 July 2026 · 12:00-13:00</span>
+    <p>Two apprentice teams debated whether companies should be allowed to monetise user data.</p>
+  </button>
+
   <button
     class="de-event-card de-event-card--past"
     type="button"
