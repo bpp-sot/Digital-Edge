@@ -115,4 +115,21 @@
     <a class="de-person-card__cta" href="catherine-hatfield/">View profile</a>
   </article>
 
+  <article class="de-person-card">
+    <div class="de-person-card__header">
+      <span class="de-person-card__initials" aria-hidden="true">SK</span>
+      <div>
+        <a class="de-person-card__name" href="scott-kenyon/">Scott Kenyon</a>
+        <p class="de-person-card__role">Programme Lead, Software &amp; DevOps</p>
+      </div>
+    </div>
+    <p>Software testing, quality engineering, and DevOps, exploring how human expertise and AI combine to build reliable software.</p>
+    <div class="de-person-card__topics" aria-label="Scott Kenyon subject areas">
+      <span>Quality engineering</span>
+      <span>Software testing</span>
+      <span>DevOps</span>
+    </div>
+    <a class="de-person-card__cta" href="scott-kenyon/">View profile</a>
+  </article>
+
 </div>
