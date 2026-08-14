@@ -31,6 +31,7 @@
   <button type="button" data-article-tag="Adoption">Adoption</button>
   <button type="button" data-article-tag="Sustainability">Sustainability</button>
   <button type="button" data-article-tag="Careers">Careers</button>
+  <button type="button" data-article-tag="Quality">Quality</button>
 </div>
 
 <div class="de-article-filter-bar" data-article-filter-status hidden>
@@ -39,6 +40,18 @@
 </div>
 
 <div class="de-article-list">
+  <article class="de-article-card" data-article-tags="Quality,AI,Careers" data-article-author="Scott Kenyon">
+    <div class="de-article-tags" aria-label="Article tags">
+      <button type="button" data-article-tag="Quality">Quality</button>
+      <button type="button" data-article-tag="AI">AI</button>
+      <button type="button" data-article-tag="Careers">Careers</button>
+    </div>
+    <a class="de-article-card__link" href="why-the-best-companies-invest-in-quality-engineers/">
+      <h3>Why the Best Companies Are Investing in Quality Engineers, Not Just All-Out AI</h3>
+      <p>AI can validate that a login works. It can't tell you whether the product actually feels broken to the person using it.</p>
+    </a>
+    <p class="de-byline">By <a href="../people/scott-kenyon/" data-author-filter="Scott Kenyon">Scott Kenyon</a> · 14 August 2026</p>
+  </article>
   <article class="de-article-card" data-article-tags="AI,Careers" data-article-author="Catherine Hatfield">
     <div class="de-article-tags" aria-label="Article tags">
       <button type="button" data-article-tag="AI">AI</button>
