@@ -23,8 +23,22 @@
 
   <div class="de-podcast-grid">
     <article class="de-podcast-card">
+      <span class="de-card__label">17 August 2026 - 53 min</span>
+      <h3>Should Companies Be Allowed to Monetise User Data?</h3>
+      <p>Two apprentice teams debate one of today's biggest tech and ethics questions, with the audience voting on which side made the more persuasive case.</p>
+      <a href="https://open.spotify.com/episode/0IA5fIgl95lfJ1lMk48Rwk" target="_blank" rel="noopener noreferrer">Listen on Spotify</a>
+    </article>
+
+    <article class="de-podcast-card">
+      <span class="de-card__label">30 July 2026 - 31 min</span>
+      <h3>Part 2: Game Changers: AI vs Tradition in Football</h3>
+      <p>Idris and Ed continue exploring the World Cup's use of semi-automated offsides, VAR, and sensor-enabled footballs, and what it means for data-driven decision-making beyond sport.</p>
+      <a href="https://open.spotify.com/episode/22QkpPhyslgt7V8GTdOaUY" target="_blank" rel="noopener noreferrer">Listen on Spotify</a>
+    </article>
+
+    <article class="de-podcast-card">
       <span class="de-card__label">26 June 2026 - 26 min</span>
-      <h3>Game Changers: AI vs Tradition in Football</h3>
+      <h3>Part 1: Game Changers: AI vs Tradition in Football</h3>
       <p>Idris is joined by Ed and David to explore how AI, data, and technology are shaping football, digital marketing, and major global sporting moments.</p>
       <a href="https://open.spotify.com/episode/4v7vb6iPgS07COILQncHoV" target="_blank" rel="noopener noreferrer">Listen on Spotify</a>
     </article>
