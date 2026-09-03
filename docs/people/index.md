@@ -132,4 +132,21 @@
     <a class="de-person-card__cta" href="scott-kenyon/">View profile</a>
   </article>
 
+  <article class="de-person-card">
+    <div class="de-person-card__header">
+      <span class="de-person-card__initials" aria-hidden="true">MW</span>
+      <div>
+        <a class="de-person-card__name" href="mo-warsame/">Mo Warsame</a>
+        <p class="de-person-card__role">Head of AI Learning, Tech Apps &amp; HE</p>
+      </div>
+    </div>
+    <p>AI strategy, human-AI collaboration, and learning design, turning AI strategy into practical, adopted tools across the organisation.</p>
+    <div class="de-person-card__topics" aria-label="Mo Warsame subject areas">
+      <span>AI strategy</span>
+      <span>Human-AI collaboration</span>
+      <span>Learning design</span>
+    </div>
+    <a class="de-person-card__cta" href="mo-warsame/">View profile</a>
+  </article>
+
 </div>
