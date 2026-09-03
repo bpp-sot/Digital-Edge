@@ -52,6 +52,17 @@
     </a>
     <p class="de-byline">By <a href="../people/scott-kenyon/" data-author-filter="Scott Kenyon">Scott Kenyon</a> · 14 August 2026</p>
   </article>
+  <article class="de-article-card" data-article-tags="AI,Adoption" data-article-author="Mo Warsame">
+    <div class="de-article-tags" aria-label="Article tags">
+      <button type="button" data-article-tag="AI">AI</button>
+      <button type="button" data-article-tag="Adoption">Adoption</button>
+    </div>
+    <a class="de-article-card__link" href="designing-for-co-ownership/">
+      <h3>Designing for Co-Ownership in the Age of Augmented Learning</h3>
+      <p>A human can review AI output without ever exercising real judgement. What matters is whether removing them would change the decision.</p>
+    </a>
+    <p class="de-byline">By <a href="../people/mo-warsame/" data-author-filter="Mo Warsame">Mo Warsame</a> · 15 August 2026</p>
+  </article>
   <article class="de-article-card" data-article-tags="AI,Careers" data-article-author="Catherine Hatfield">
     <div class="de-article-tags" aria-label="Article tags">
       <button type="button" data-article-tag="AI">AI</button>
