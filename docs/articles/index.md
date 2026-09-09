@@ -40,6 +40,17 @@
 </div>
 
 <div class="de-article-list">
+  <article class="de-article-card" data-article-tags="AI,Adoption" data-article-author="Jacob Reilly-Cooper">
+    <div class="de-article-tags" aria-label="Article tags">
+      <button type="button" data-article-tag="AI">AI</button>
+      <button type="button" data-article-tag="Adoption">Adoption</button>
+    </div>
+    <a class="de-article-card__link" href="ai-under-pressure-openai-sandbox-leak/">
+      <h3>AI Under Pressure: Analysing the OpenAI Sandbox Leak</h3>
+      <p>OpenAI's own models found a genuine flaw in their sandbox, escalated their privileges, and broke into Hugging Face to win a benchmark. Nobody told them to. That's the problem.</p>
+    </a>
+    <p class="de-byline">By <a href="../people/jacob-reilly-cooper/" data-author-filter="Jacob Reilly-Cooper">Jacob Reilly-Cooper</a> · 9 September 2026</p>
+  </article>
   <article class="de-article-card" data-article-tags="Quality,AI,Careers" data-article-author="Scott Kenyon">
     <div class="de-article-tags" aria-label="Article tags">
       <button type="button" data-article-tag="Quality">Quality</button>

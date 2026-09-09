@@ -30,6 +30,13 @@ His work focuses on helping people build confidence with emerging technologies, 
 
 <div class="de-article-list de-article-list--profile">
   <article class="de-article-card">
+    <a class="de-article-card__link" href="../../articles/ai-under-pressure-openai-sandbox-leak/">
+      <h3>AI Under Pressure: Analysing the OpenAI Sandbox Leak</h3>
+      <p>OpenAI's own models found a genuine flaw in their sandbox, escalated their privileges, and broke into Hugging Face to win a benchmark. Nobody told them to. That's the problem.</p>
+    </a>
+    <p class="de-article-card__meta">Article · <a href="../../articles/?tag=AI">AI</a>, <a href="../../articles/?tag=Adoption">Adoption</a></p>
+  </article>
+  <article class="de-article-card">
     <a class="de-article-card__link" href="../../articles/agentic-engineering/">
       <h3>Agentic Engineering</h3>
       <p>The next gap education needs to close as AI agents move from advice into real workflows.</p>
