@@ -40,6 +40,17 @@
 </div>
 
 <div class="de-article-list">
+  <article class="de-article-card" data-article-tags="AI,Workflows" data-article-author="Idris Fabiyi">
+    <div class="de-article-tags" aria-label="Article tags">
+      <button type="button" data-article-tag="AI">AI</button>
+      <button type="button" data-article-tag="Workflows">Workflows</button>
+    </div>
+    <a class="de-article-card__link" href="did-gpt-6-astra-cross-the-line/">
+      <h3>Did GPT-6 Astra Just Cross the Line?</h3>
+      <p>We spent three years learning how to write the perfect prompt. With GPT-6 Astra, AI is no longer waiting for instructions, and that changes everything for the next generation of professionals.</p>
+    </a>
+    <p class="de-byline">By <a href="../people/idris-fabiyi/" data-author-filter="Idris Fabiyi">Idris Fabiyi</a> · 11 September 2026</p>
+  </article>
   <article class="de-article-card" data-article-tags="AI,Adoption" data-article-author="Jacob Reilly-Cooper">
     <div class="de-article-tags" aria-label="Article tags">
       <button type="button" data-article-tag="AI">AI</button>
