@@ -25,78 +25,6 @@
   <button
     class="de-event-card"
     type="button"
-    data-event-filter-key="performance"
-    data-event-title="Emotional Intelligence"
-    data-event-type="Performance & Impact Session"
-    data-event-status="Upcoming"
-    data-event-date="Tuesday 11 August 2026"
-    data-event-time="13:00-14:00"
-    data-event-start="2026-08-11T13:00:00+01:00"
-    data-event-end="2026-08-11T14:00:00+01:00"
-    data-event-location="Online"
-    data-event-description="Emotional intelligence, otherwise known as emotional quotient or EQ, is the ability to understand, use, and manage your own emotions in positive ways to relieve stress, communicate effectively, overcome challenges, and defuse conflict. Emotional intelligence helps you build stronger relationships, succeed at work, and achieve your career and personal goals."
-    data-event-audience="Learners and apprentices who want to communicate more effectively, manage emotions, and build stronger workplace relationships."
-  >
-    <div class="de-event-tags">
-      <span class="de-event-type de-event-type--performance">Performance &amp; Impact</span>
-      <span class="de-event-status de-event-status--upcoming">Upcoming</span>
-    </div>
-    <strong>Emotional Intelligence</strong>
-    <span>Tuesday 11 August 2026 · 13:00-14:00</span>
-    <p>Performance &amp; Impact session on understanding and managing emotions at work.</p>
-  </button>
-
-  <button
-    class="de-event-card"
-    type="button"
-    data-event-filter-key="masterclass"
-    data-event-title="AI in Action: Everyday Tools You're Already Using"
-    data-event-type="Masterclass"
-    data-event-status="Upcoming"
-    data-event-date="Friday 28 August 2026"
-    data-event-time="12:00-13:00"
-    data-event-start="2026-08-28T12:00:00+01:00"
-    data-event-end="2026-08-28T13:00:00+01:00"
-    data-event-location="Online"
-    data-event-description="Uncover how AI is already embedded in your daily work emails, meetings, documents, and more. This session explores practical, real-world use cases that enhance productivity without needing technical expertise."
-    data-event-audience="Learners and apprentices who want to understand practical AI use cases already appearing in everyday workplace tools."
-  >
-    <div class="de-event-tags">
-      <span class="de-event-type de-event-type--masterclass">Masterclass</span>
-      <span class="de-event-status de-event-status--upcoming">Upcoming</span>
-    </div>
-    <strong>AI in Action: Everyday Tools You're Already Using</strong>
-    <span>Friday 28 August 2026 · 12:00-13:00</span>
-    <p>Masterclass on everyday AI tools already supporting emails, meetings, documents, and productivity.</p>
-  </button>
-
-  <button
-    class="de-event-card"
-    type="button"
-    data-event-filter-key="performance"
-    data-event-title="Handling Difficult Conversations"
-    data-event-type="Performance & Impact Session"
-    data-event-status="Upcoming"
-    data-event-date="Tuesday 8 September 2026"
-    data-event-time="13:00-14:00"
-    data-event-start="2026-09-08T13:00:00+01:00"
-    data-event-end="2026-09-08T14:00:00+01:00"
-    data-event-location="Online"
-    data-event-description="Join us for this very important session on handling difficult conversations. We will explore typical case studies of scenarios you may face in your professional career, and you will discuss strategies with colleagues."
-    data-event-audience="Learners and apprentices who want practical strategies for preparing for and handling challenging professional conversations."
-  >
-    <div class="de-event-tags">
-      <span class="de-event-type de-event-type--performance">Performance &amp; Impact</span>
-      <span class="de-event-status de-event-status--upcoming">Upcoming</span>
-    </div>
-    <strong>Handling Difficult Conversations</strong>
-    <span>Tuesday 8 September 2026 · 13:00-14:00</span>
-    <p>Performance &amp; Impact session on professional conversations and workplace scenarios.</p>
-  </button>
-
-  <button
-    class="de-event-card"
-    type="button"
     data-event-filter-key="masterclass"
     data-event-title="API Economy: How Everything Connects Now"
     data-event-type="Masterclass"
@@ -271,6 +199,72 @@
   </div>
 
 <div class="de-event-grid" aria-label="Past Digital Edge events">
+  <button
+    class="de-event-card de-event-card--past"
+    type="button"
+    data-event-filter-key="performance"
+    data-event-title="Handling Difficult Conversations"
+    data-event-type="Performance & Impact Session"
+    data-event-status="Past"
+    data-event-date="Tuesday 8 September 2026"
+    data-event-time="13:00-14:00"
+    data-event-location="Online"
+    data-event-description="This past session covered handling difficult conversations, exploring typical case studies of scenarios learners may face in their professional career, with strategies discussed among colleagues."
+    data-event-audience="Learners and apprentices who want practical strategies for preparing for and handling challenging professional conversations."
+  >
+    <div class="de-event-tags">
+      <span class="de-event-type de-event-type--performance">Performance &amp; Impact</span>
+      <span class="de-event-status de-event-status--past">Past</span>
+    </div>
+    <strong>Handling Difficult Conversations</strong>
+    <span>Tuesday 8 September 2026 · 13:00-14:00</span>
+    <p>Performance &amp; Impact session on professional conversations and workplace scenarios.</p>
+  </button>
+
+  <button
+    class="de-event-card de-event-card--past"
+    type="button"
+    data-event-filter-key="masterclass"
+    data-event-title="AI in Action: Everyday Tools You're Already Using"
+    data-event-type="Masterclass"
+    data-event-status="Past"
+    data-event-date="Friday 28 August 2026"
+    data-event-time="12:00-13:00"
+    data-event-location="Online"
+    data-event-description="This past session uncovered how AI is already embedded in daily work: emails, meetings, documents, and more, exploring practical, real-world use cases that enhance productivity without needing technical expertise."
+    data-event-audience="Learners and apprentices who want to understand practical AI use cases already appearing in everyday workplace tools."
+  >
+    <div class="de-event-tags">
+      <span class="de-event-type de-event-type--masterclass">Masterclass</span>
+      <span class="de-event-status de-event-status--past">Past</span>
+    </div>
+    <strong>AI in Action: Everyday Tools You're Already Using</strong>
+    <span>Friday 28 August 2026 · 12:00-13:00</span>
+    <p>Masterclass on everyday AI tools already supporting emails, meetings, documents, and productivity.</p>
+  </button>
+
+  <button
+    class="de-event-card de-event-card--past"
+    type="button"
+    data-event-filter-key="performance"
+    data-event-title="Emotional Intelligence"
+    data-event-type="Performance & Impact Session"
+    data-event-status="Past"
+    data-event-date="Tuesday 11 August 2026"
+    data-event-time="13:00-14:00"
+    data-event-location="Online"
+    data-event-description="This past session covered emotional intelligence, otherwise known as emotional quotient or EQ: the ability to understand, use, and manage your own emotions in positive ways to relieve stress, communicate effectively, overcome challenges, and defuse conflict."
+    data-event-audience="Learners and apprentices who want to communicate more effectively, manage emotions, and build stronger workplace relationships."
+  >
+    <div class="de-event-tags">
+      <span class="de-event-type de-event-type--performance">Performance &amp; Impact</span>
+      <span class="de-event-status de-event-status--past">Past</span>
+    </div>
+    <strong>Emotional Intelligence</strong>
+    <span>Tuesday 11 August 2026 · 13:00-14:00</span>
+    <p>Performance &amp; Impact session on understanding and managing emotions at work.</p>
+  </button>
+
   <button
     class="de-event-card de-event-card--past"
     type="button"
