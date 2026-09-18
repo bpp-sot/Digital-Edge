@@ -23,6 +23,13 @@
 
   <div class="de-podcast-grid">
     <article class="de-podcast-card">
+      <span class="de-card__label">17 September 2026 - 55 min</span>
+      <h3>AI as a People Challenge, Not a Technology Challenge</h3>
+      <p>Idris is joined by Prof. Ian Clarkson, Senior Director for PRINCE2 at PeopleCert, to challenge the idea that AI is a transformation in itself, arguing it's an enabler of wider business change.</p>
+      <a href="https://open.spotify.com/episode/4fIueRNgm51LsjyZ3it1Ef" target="_blank" rel="noopener noreferrer">Listen on Spotify</a>
+    </article>
+
+    <article class="de-podcast-card">
       <span class="de-card__label">17 August 2026 - 53 min</span>
       <h3>Should Companies Be Allowed to Monetise User Data?</h3>
       <p>Two apprentice teams debate one of today's biggest tech and ethics questions, with the audience voting on which side made the more persuasive case.</p>
