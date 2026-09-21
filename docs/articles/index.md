@@ -40,6 +40,17 @@
 </div>
 
 <div class="de-article-list">
+  <article class="de-article-card" data-article-tags="AI,Adoption" data-article-author="Mo Warsame">
+    <div class="de-article-tags" aria-label="Article tags">
+      <button type="button" data-article-tag="AI">AI</button>
+      <button type="button" data-article-tag="Adoption">Adoption</button>
+    </div>
+    <a class="de-article-card__link" href="economics-of-the-ai-apocalypse/">
+      <h3>The Economics of the AI Apocalypse: What Schumpeter Tells Us About the Race to Superintelligence</h3>
+      <p>The conventional AI apocalypse imagines a machine clever enough to pick the lock. The Schumpeterian possibility is stranger: we may simply keep handing over the keys.</p>
+    </a>
+    <p class="de-byline">By <a href="../people/mo-warsame/" data-author-filter="Mo Warsame">Mo Warsame</a> · 21 September 2026</p>
+  </article>
   <article class="de-article-card" data-article-tags="AI,Workflows" data-article-author="Idris Fabiyi">
     <div class="de-article-tags" aria-label="Article tags">
       <button type="button" data-article-tag="AI">AI</button>

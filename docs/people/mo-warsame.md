@@ -29,6 +29,13 @@ A former senior data analyst, Mo's expertise spans advanced analytics, data insi
 
 <div class="de-article-list de-article-list--profile">
   <article class="de-article-card">
+    <a class="de-article-card__link" href="../../articles/economics-of-the-ai-apocalypse/">
+      <h3>The Economics of the AI Apocalypse: What Schumpeter Tells Us About the Race to Superintelligence</h3>
+      <p>The conventional AI apocalypse imagines a machine clever enough to pick the lock. The Schumpeterian possibility is stranger: we may simply keep handing over the keys.</p>
+    </a>
+    <p class="de-article-card__meta">Article · <a href="../../articles/?tag=AI">AI</a>, <a href="../../articles/?tag=Adoption">Adoption</a></p>
+  </article>
+  <article class="de-article-card">
     <a class="de-article-card__link" href="../../articles/designing-for-co-ownership/">
       <h3>Designing for Co-Ownership in the Age of Augmented Learning</h3>
       <p>A human can review AI output without ever exercising real judgement. What matters is whether removing them would change the decision.</p>
