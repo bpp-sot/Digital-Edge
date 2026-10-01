@@ -35,7 +35,7 @@
   <a class="de-card" href="community-news/">
     <span class="de-card__label">Browse</span>
     <h3>Community News</h3>
-    <p>Updates from across the learner community, including newsletters, events, awards, careers, and support.</p>
+    <p>Updates from across the learner community, including events, awards, learner stories, and programme news.</p>
   </a>
   <a class="de-card" href="podcast/">
     <span class="de-card__label">Listen</span>
@@ -69,6 +69,6 @@
   <a href="community-news/">
     <span>Community</span>
     <strong>Apprentice and School Updates</strong>
-    <p>Browse community updates, newsletter editions, and learner news.</p>
+    <p>Browse event round-ups, award stories, and learner news.</p>
   </a>
 </div>
