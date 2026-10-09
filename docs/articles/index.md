@@ -40,6 +40,17 @@
 </div>
 
 <div class="de-article-list">
+  <article class="de-article-card" data-article-tags="Marketing,AI" data-article-author="David Green">
+    <div class="de-article-tags" aria-label="Article tags">
+      <button type="button" data-article-tag="Marketing">Marketing</button>
+      <button type="button" data-article-tag="AI">AI</button>
+    </div>
+    <a class="de-article-card__link" href="australia-digital-duty-of-care/">
+      <h3>Digital Platforms Under Pressure: What Australia's Digital Duty of Care Reveals About the Future of the Internet</h3>
+      <p>Australia's proposed Digital Duty of Care shifts the question from removing harmful content to preventing systems from amplifying harm in the first place.</p>
+    </a>
+    <p class="de-byline">By <a href="../people/david-green/" data-author-filter="David Green">David Green</a> · 8 October 2026</p>
+  </article>
   <article class="de-article-card" data-article-tags="AI,Adoption" data-article-author="Mo Warsame">
     <div class="de-article-tags" aria-label="Article tags">
       <button type="button" data-article-tag="AI">AI</button>

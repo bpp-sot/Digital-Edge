@@ -35,7 +35,7 @@
       <span class="de-person-card__initials" aria-hidden="true">DG</span>
       <div>
         <a class="de-person-card__name" href="david-green/">David Green</a>
-        <p class="de-person-card__role">Programme Lead</p>
+        <p class="de-person-card__role">Programme Lead, Digital Marketing</p>
       </div>
     </div>
     <p>Digital marketing, AI-mediated discovery, learner trust, and advertising ethics.</p>

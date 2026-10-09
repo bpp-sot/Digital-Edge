@@ -4,6 +4,7 @@ description: "AI answers are becoming places where influence happens, changing h
 lede: "AI answers are becoming places where influence happens. That changes how brands are discovered, how learners make decisions, and how marketers earn trust."
 author: "David Green"
 author_slug: "david-green"
+author_role: "Programme Lead, Digital Marketing"
 date: "2026-06-05"
 updated: "2026-06-05"
 date_display: "5 June 2026"
