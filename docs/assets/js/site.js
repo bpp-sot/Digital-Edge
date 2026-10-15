@@ -1852,6 +1852,27 @@
     });
   }
 
+  function installSinglePointDiagrams() {
+    document.querySelectorAll("[data-spof]").forEach((diagram) => {
+      const toggle = diagram.querySelector("[data-spof-toggle]");
+      const status = diagram.querySelector("[data-spof-status]");
+      if (!toggle) return;
+
+      toggle.hidden = false;
+      toggle.addEventListener("click", () => {
+        const cut = diagram.getAttribute("data-cut") !== "true";
+        diagram.setAttribute("data-cut", String(cut));
+        toggle.setAttribute("aria-pressed", String(cut));
+        toggle.textContent = cut ? "Restore the AI cable" : "Cut the AI cable";
+        if (status) {
+          status.textContent = cut
+            ? "AI cable cut. The single-cable setup stops, while the resilient network keeps running."
+            : "AI cable restored.";
+        }
+      });
+    });
+  }
+
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", installCodeCopyButtons);
     document.addEventListener("DOMContentLoaded", installInlineGuidedPractice);
@@ -1864,6 +1885,7 @@
     document.addEventListener("DOMContentLoaded", installDistinctGuideActivities);
     document.addEventListener("DOMContentLoaded", installBiasGame);
     document.addEventListener("DOMContentLoaded", installArticlePolls);
+    document.addEventListener("DOMContentLoaded", installSinglePointDiagrams);
   } else {
     installCodeCopyButtons();
     installInlineGuidedPractice();
@@ -1876,6 +1898,7 @@
     installDistinctGuideActivities();
     installBiasGame();
     installArticlePolls();
+    installSinglePointDiagrams();
   }
 
   installSearchPolish(40);

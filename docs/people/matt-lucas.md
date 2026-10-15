@@ -31,6 +31,13 @@ Matt is also enthusiastic about the opportunities presented by AI and is keen to
 
 <div class="de-article-list de-article-list--profile">
   <article class="de-article-card">
+    <a class="de-article-card__link" href="../../articles/dont-make-ai-your-single-point-of-failure/">
+      <h3>Don't Make AI Your Single Point of Failure</h3>
+      <p>Shetland's sub-sea cables show how much our digital world depends on a few physical links. Our growing reliance on AI risks building the same weakness into how we think.</p>
+    </a>
+    <p class="de-article-card__meta">Article · <a href="../../articles/?tag=AI">AI</a>, <a href="../../articles/?tag=Workflows">Workflows</a></p>
+  </article>
+  <article class="de-article-card">
     <a class="de-article-card__link" href="../../articles/are-you-an-ai-optimist/">
       <h3>Are You an AI Optimist?</h3>
       <p>Technological capability alone does not decide the future we get. The choices we make shape whether it turns out well.</p>

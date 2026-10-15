@@ -40,6 +40,17 @@
 </div>
 
 <div class="de-article-list">
+  <article class="de-article-card" data-article-tags="AI,Workflows" data-article-author="Matt Lucas">
+    <div class="de-article-tags" aria-label="Article tags">
+      <button type="button" data-article-tag="AI">AI</button>
+      <button type="button" data-article-tag="Workflows">Workflows</button>
+    </div>
+    <a class="de-article-card__link" href="dont-make-ai-your-single-point-of-failure/">
+      <h3>Don't Make AI Your Single Point of Failure</h3>
+      <p>Shetland's sub-sea cables show how much our digital world depends on a few physical links. Our growing reliance on AI risks building the same weakness into how we think.</p>
+    </a>
+    <p class="de-byline">By <a href="../people/matt-lucas/" data-author-filter="Matt Lucas">Matt Lucas</a> · 15 October 2026</p>
+  </article>
   <article class="de-article-card" data-article-tags="Marketing,AI" data-article-author="David Green">
     <div class="de-article-tags" aria-label="Article tags">
       <button type="button" data-article-tag="Marketing">Marketing</button>
