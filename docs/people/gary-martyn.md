@@ -17,6 +17,12 @@
   <span>Technical training</span>
 </div>
 
+## Biography
+
+Gary Martyn is the Networking, Cyber Security and ICT Programme Lead. He has specialised in graduate and apprenticeship education, development, coaching and management for over 25 years. He leverages his technical employment history, his passion for innovation and his years of technical and business skills training experience to make technology learning that is accessible and engaging for learners, as well as impactful and relevant for employers.
+
+Gary approaches education with curiosity and encourages the same in others, believing that learning is easier if you want to know more. His curiosity and passion for technology started at a young age when his Dad gave him a ZX81 computer, and he has been curious and asking "How does that work?" and "What if I could...?" ever since.
+
 ## Digital Edge Articles
 
 <div class="de-article-list de-article-list--profile">
