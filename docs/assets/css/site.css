@@ -5431,3 +5431,413 @@ footer hr {
     transition: none;
   }
 }
+
+/* WiFi 7 vs Private 5G article components. Technology colours are used
+   consistently: WiFi = teal, Private 5G = purple, wired = silver. */
+/* Matched with .de-article-hero ~ p so it outranks the article body
+   paragraph size set further up. */
+.de-article-interjection,
+.de-article-hero ~ p.de-article-interjection {
+  margin: 30px 0;
+  color: var(--de-bpp-purple);
+  font-size: clamp(1.45rem, 3vw, 1.95rem);
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+/* "VS" medallion: the container's ::after becomes the middle grid item. */
+.de-article-compare--versus {
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+}
+
+.de-article-compare--versus article:first-child {
+  order: 1;
+}
+
+.de-article-compare--versus article:last-child {
+  order: 3;
+}
+
+.de-article-compare--versus::after {
+  display: grid;
+  place-items: center;
+  order: 2;
+  align-self: center;
+  width: 54px;
+  height: 54px;
+  color: var(--de-ink);
+  background: var(--de-gold);
+  border-radius: 50%;
+  box-shadow: 0 0 0 5px #ffffff, 0 10px 22px rgba(23, 33, 43, 0.16);
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  content: "VS";
+}
+
+.de-article-compare--versus article,
+.de-article-compare--zones article {
+  border-top: 5px solid var(--de-teal);
+}
+
+.de-article-compare--versus article:nth-child(2),
+.de-article-compare--zones article:nth-child(2) {
+  border-left: 1px solid var(--de-line);
+}
+
+.de-article-compare--versus article:last-child,
+.de-article-compare--zones article:first-child {
+  border-top-color: var(--de-bpp-purple);
+}
+
+.de-article-compare--zones article > p {
+  margin: 0;
+  color: var(--de-muted);
+  font-size: 0.94rem;
+}
+
+.de-speed-chart {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin: 22px 0 30px;
+}
+
+.de-speed-chart > div {
+  padding: 20px;
+  background: #ffffff;
+  border: 1px solid var(--de-line);
+  border-radius: 8px;
+  box-shadow: var(--de-shadow-card);
+}
+
+.de-speed-chart h3 {
+  margin: 0;
+  font-size: 1.15rem;
+}
+
+.de-speed-chart > div > p {
+  margin: 2px 0 14px;
+  color: var(--de-muted);
+  font-weight: 700;
+}
+
+.de-speed-chart figcaption {
+  grid-column: 1 / -1;
+  color: var(--de-muted);
+  font-size: 0.88rem;
+}
+
+.de-bar-chart.de-bar-chart--wireless span {
+  grid-template-columns: 120px minmax(0, 1fr);
+  grid-template-areas:
+    "label bar"
+    "label value";
+  row-gap: 2px;
+}
+
+.de-bar-chart.de-bar-chart--wireless em {
+  font-size: 0.86rem;
+}
+
+.de-bar-chart.de-bar-chart--wireless span.is-wifi::before {
+  background: var(--de-teal);
+}
+
+.de-bar-chart.de-bar-chart--wireless span.is-5g::before {
+  background: var(--de-bpp-purple);
+}
+
+.de-bar-chart.de-bar-chart--wireless span.is-wired::before {
+  background: var(--de-silver);
+}
+
+/* Pick-a-side quiz: installChoiceSorters() in site.js reveals it (it is
+   hidden without JS, where the static lists that follow carry the content)
+   and sets data-result="match" or "miss" on each answered item. */
+.de-sorter {
+  margin: 18px 0 30px;
+  padding: 20px;
+  background: #ffffff;
+  border: 1px solid var(--de-line);
+  border-radius: 8px;
+  box-shadow: var(--de-shadow-card);
+}
+
+.de-sorter__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.de-sorter__item {
+  padding: 14px;
+  background: #f8fafc;
+  border: 1px solid var(--de-line);
+  border-left: 5px solid var(--de-line);
+  border-radius: 8px;
+  transition: border-color 160ms ease;
+}
+
+.de-sorter__item[data-result="match"] {
+  border-left-color: var(--de-teal);
+}
+
+.de-sorter__item[data-result="miss"] {
+  border-left-color: var(--de-coral);
+}
+
+.de-sorter__item > strong {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.de-sorter__choices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.de-sorter__choices button {
+  flex: 1 1 0;
+  min-height: 40px;
+  padding: 8px 12px;
+  color: var(--de-ink);
+  background: #ffffff;
+  border: 2px solid var(--de-line);
+  border-radius: 999px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.de-sorter__choices button[data-sorter-choice="wifi"]:hover,
+.de-sorter__choices button[data-sorter-choice="wifi"]:focus-visible {
+  border-color: var(--de-teal);
+}
+
+.de-sorter__choices button[data-sorter-choice="5g"]:hover,
+.de-sorter__choices button[data-sorter-choice="5g"]:focus-visible {
+  border-color: var(--de-bpp-purple);
+}
+
+.de-sorter__choices button[data-sorter-choice="wifi"][aria-pressed="true"] {
+  color: #ffffff;
+  background: var(--de-teal);
+  border-color: var(--de-teal);
+}
+
+.de-sorter__choices button[data-sorter-choice="5g"][aria-pressed="true"] {
+  color: #ffffff;
+  background: var(--de-bpp-purple);
+  border-color: var(--de-bpp-purple);
+}
+
+.de-sorter__feedback {
+  margin: 10px 0 0;
+  color: var(--de-muted);
+  font-size: 0.92rem;
+}
+
+.de-sorter__score {
+  margin: 14px 0 0;
+  color: var(--de-bpp-purple);
+  font-weight: 900;
+}
+
+.de-sorter__score:empty {
+  display: none;
+}
+
+.de-wireless-stack {
+  margin: 22px 0 30px;
+}
+
+.de-wireless-stack__lanes,
+.de-wireless-stack__base {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.de-wireless-stack__lanes {
+  gap: 14px;
+}
+
+.de-wireless-stack__lane {
+  padding: 22px;
+  color: #ffffff;
+  border-radius: 8px 8px 0 0;
+}
+
+.de-wireless-stack__lane--wifi {
+  background: linear-gradient(135deg, #034e4c, var(--de-teal));
+}
+
+.de-wireless-stack__lane--5g {
+  background: linear-gradient(135deg, var(--de-bpp-purple-dark), var(--de-bpp-purple));
+}
+
+.de-wireless-stack__lane span {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.de-wireless-stack__lane strong {
+  color: rgba(255, 255, 255, 0.92);
+  font-weight: 600;
+}
+
+.de-wireless-stack__base {
+  gap: 1px;
+  margin-top: 6px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 0 0 8px 8px;
+}
+
+.de-wireless-stack__base div {
+  padding: 14px 18px;
+  color: #ffffff;
+  background: var(--de-ink);
+  font-weight: 800;
+  text-align: center;
+}
+
+.de-wireless-stack figcaption {
+  margin-top: 10px;
+  color: var(--de-muted);
+  font-weight: 800;
+  text-align: center;
+}
+
+.de-role-map {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin: 20px 0 28px;
+}
+
+.de-role-map span,
+.de-role-map strong {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 66px;
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.de-role-map span {
+  color: var(--de-ink);
+  background: #ffffff;
+  border: 1px solid var(--de-line);
+  border-top: 4px solid var(--de-teal);
+  box-shadow: var(--de-shadow-card);
+  font-weight: 800;
+}
+
+.de-role-map span:nth-child(even) {
+  border-top-color: var(--de-bpp-purple);
+}
+
+.de-role-map strong {
+  color: #ffffff;
+  background: radial-gradient(circle at 30% 20%, var(--de-bpp-purple), var(--de-bpp-purple-dark));
+  box-shadow: 0 0 0 4px var(--de-bpp-teal), 0 14px 30px rgba(23, 33, 43, 0.18);
+  font-size: 1.15rem;
+  font-weight: 900;
+}
+
+.de-predictions {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin: 20px 0 28px;
+}
+
+.de-predictions figure {
+  position: relative;
+  margin: 0;
+  padding: 24px 20px 52px;
+  background: #ffffff;
+  border: 2px dashed var(--de-line);
+  border-radius: 8px;
+}
+
+.de-predictions blockquote {
+  margin: 0;
+  padding: 0;
+  color: var(--de-muted);
+  border: 0;
+  font-size: 1.12rem;
+  font-style: italic;
+  font-weight: 800;
+}
+
+.de-predictions__stamp {
+  position: absolute;
+  right: 16px;
+  bottom: 14px;
+  padding: 3px 10px;
+  color: var(--de-coral);
+  border: 2px solid var(--de-coral);
+  border-radius: 4px;
+  font-size: 0.74rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  transform: rotate(-6deg);
+}
+
+@media (max-width: 900px) {
+  .de-speed-chart,
+  .de-predictions {
+    grid-template-columns: 1fr;
+  }
+
+  .de-article-compare--versus {
+    grid-template-columns: 1fr;
+  }
+
+  .de-article-compare--versus::after {
+    justify-self: center;
+  }
+}
+
+@media (max-width: 700px) {
+  .de-wireless-stack__lanes,
+  .de-wireless-stack__base {
+    grid-template-columns: 1fr;
+  }
+
+  .de-wireless-stack__lane {
+    border-radius: 8px;
+  }
+
+  .de-wireless-stack__base {
+    border-radius: 8px;
+  }
+}
+
+@media (max-width: 560px) {
+  .de-role-map {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .de-role-map strong {
+    grid-column: 1 / -1;
+    order: -1;
+  }
+
+  .de-bar-chart.de-bar-chart--wireless span {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "label"
+      "bar"
+      "value";
+  }
+}

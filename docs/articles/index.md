@@ -32,6 +32,7 @@
   <button type="button" data-article-tag="Sustainability">Sustainability</button>
   <button type="button" data-article-tag="Careers">Careers</button>
   <button type="button" data-article-tag="Quality">Quality</button>
+  <button type="button" data-article-tag="Networking">Networking</button>
 </div>
 
 <div class="de-article-filter-bar" data-article-filter-status hidden>
@@ -40,6 +41,17 @@
 </div>
 
 <div class="de-article-list">
+  <article class="de-article-card" data-article-tags="Networking,Careers" data-article-author="Gary Martyn">
+    <div class="de-article-tags" aria-label="Article tags">
+      <button type="button" data-article-tag="Networking">Networking</button>
+      <button type="button" data-article-tag="Careers">Careers</button>
+    </div>
+    <a class="de-article-card__link" href="wifi-7-vs-private-5g/">
+      <h3>WiFi 7 vs Private 5G: Is WiFi Dying and Should We Ditch It Now?</h3>
+      <p>Private 5G is growing fast in industry, and some say WiFi's days are numbered. Gary Martyn weighs up both technologies, where each belongs, and what it means for network engineers.</p>
+    </a>
+    <p class="de-byline">By <a href="../people/gary-martyn/" data-author-filter="Gary Martyn">Gary Martyn</a> · 21 October 2026</p>
+  </article>
   <article class="de-article-card" data-article-tags="AI,Workflows" data-article-author="Matt Lucas">
     <div class="de-article-tags" aria-label="Article tags">
       <button type="button" data-article-tag="AI">AI</button>

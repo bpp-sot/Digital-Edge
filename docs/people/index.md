@@ -15,6 +15,23 @@
 <div class="de-people-grid" aria-label="Technology faculty expertise">
   <article class="de-person-card">
     <div class="de-person-card__header">
+      <span class="de-person-card__initials" aria-hidden="true">GM</span>
+      <div>
+        <a class="de-person-card__name" href="gary-martyn/">Gary Martyn</a>
+        <p class="de-person-card__role">Level 3-5 Network Engineering Programme Lead</p>
+      </div>
+    </div>
+    <p>Enterprise networking, wireless technology, Network Engineering apprenticeships, and technical training.</p>
+    <div class="de-person-card__topics" aria-label="Gary Martyn subject areas">
+      <span>Network engineering</span>
+      <span>Wireless networking</span>
+      <span>Apprenticeships</span>
+    </div>
+    <a class="de-person-card__cta" href="gary-martyn/">View profile</a>
+  </article>
+
+  <article class="de-person-card">
+    <div class="de-person-card__header">
       <span class="de-person-card__initials" aria-hidden="true">JR</span>
       <div>
         <a class="de-person-card__name" href="jacob-reilly-cooper/">Jacob Reilly-Cooper</a>

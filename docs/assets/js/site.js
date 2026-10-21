@@ -1873,6 +1873,49 @@
     });
   }
 
+  function installChoiceSorters() {
+    document.querySelectorAll("[data-sorter]").forEach((sorter) => {
+      const items = sorter.querySelectorAll("[data-sorter-item]");
+      const score = sorter.querySelector("[data-sorter-score]");
+      const expert = sorter.getAttribute("data-sorter-expert") || "the author";
+      if (!items.length) return;
+
+      sorter.hidden = false;
+
+      function updateScore() {
+        if (!score) return;
+        const answered = sorter.querySelectorAll("[data-sorter-item][data-result]").length;
+        const matched = sorter.querySelectorAll('[data-sorter-item][data-result="match"]').length;
+        score.textContent =
+          answered === items.length
+            ? `You matched ${expert} on ${matched} of ${items.length}.`
+            : `${matched} of ${answered} so far match ${expert}'s pick.`;
+      }
+
+      items.forEach((item) => {
+        const answer = item.getAttribute("data-answer");
+        const feedback = item.querySelector("[data-sorter-feedback]");
+        const buttons = item.querySelectorAll("[data-sorter-choice]");
+        const answerButton = item.querySelector(`[data-sorter-choice="${answer}"]`);
+        const answerLabel = answerButton ? answerButton.textContent.trim() : answer;
+
+        buttons.forEach((button) => {
+          button.addEventListener("click", () => {
+            buttons.forEach((other) => other.setAttribute("aria-pressed", String(other === button)));
+            const match = button === answerButton;
+            item.setAttribute("data-result", match ? "match" : "miss");
+            if (feedback) {
+              const verdict = match ? `Same as ${expert}.` : `${expert} would pick ${answerLabel}.`;
+              feedback.textContent = `${verdict} ${item.getAttribute("data-reason") || ""}`.trim();
+              feedback.hidden = false;
+            }
+            updateScore();
+          });
+        });
+      });
+    });
+  }
+
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", installCodeCopyButtons);
     document.addEventListener("DOMContentLoaded", installInlineGuidedPractice);
@@ -1886,6 +1929,7 @@
     document.addEventListener("DOMContentLoaded", installBiasGame);
     document.addEventListener("DOMContentLoaded", installArticlePolls);
     document.addEventListener("DOMContentLoaded", installSinglePointDiagrams);
+    document.addEventListener("DOMContentLoaded", installChoiceSorters);
   } else {
     installCodeCopyButtons();
     installInlineGuidedPractice();
@@ -1899,6 +1943,7 @@
     installBiasGame();
     installArticlePolls();
     installSinglePointDiagrams();
+    installChoiceSorters();
   }
 
   installSearchPolish(40);
