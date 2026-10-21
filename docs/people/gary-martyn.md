@@ -4,8 +4,7 @@
   <div>
     <p class="de-kicker">Author profile</p>
     <h1>Gary Martyn</h1>
-    <p class="de-profile-role">Level 3-5 Network Engineering Programme Lead</p>
-    <p>Gary leads the Level 3 to 5 Network Engineering apprenticeship programmes across the BPP group of companies, and writes about enterprise networking, wireless technology, and the skills network engineers will need next.</p>
+    <p class="de-profile-role">Networking, Cyber Security and ICT Programme Lead</p>
   </div>
 </section>
 
@@ -17,14 +16,6 @@
   <span>Apprenticeship design</span>
   <span>Technical training</span>
 </div>
-
-## Biography
-
-Gary manages the Level 3 to 5 Network Engineering apprenticeship programmes across the BPP group of companies, splitting the role between training and programme management: designing content, supporting internal teams, and working with employers and learners. When IfATE updated the Network Engineering standard in mid-2025, Gary began redesigning the programme to deliver the new government-approved standards.
-
-Gary decided to become a trainer around 30 years ago, after a training course showed how rewarding it could be to help people discover new things about themselves and develop new skills, and has now been a trainer for 27 years. Earlier in that career, Gary worked in a global training role for a blue-chip company, delivering training to thousands of people around the world.
-
-Read more in <a href="../../community-news/staff-spotlight-gary-martyn/">Gary's staff spotlight</a>.
 
 ## Digital Edge Articles
 

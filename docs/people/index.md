@@ -18,7 +18,7 @@
       <span class="de-person-card__initials" aria-hidden="true">GM</span>
       <div>
         <a class="de-person-card__name" href="gary-martyn/">Gary Martyn</a>
-        <p class="de-person-card__role">Level 3-5 Network Engineering Programme Lead</p>
+        <p class="de-person-card__role">Networking, Cyber Security and ICT Programme Lead</p>
       </div>
     </div>
     <p>Enterprise networking, wireless technology, Network Engineering apprenticeships, and technical training.</p>

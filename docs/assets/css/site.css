@@ -1715,6 +1715,11 @@ body.de-modal-open {
   grid-area: bio;
 }
 
+/* A profile with no bio yet: keep the role beside the name. */
+.de-profile-hero p.de-profile-role:last-child {
+  grid-area: role;
+}
+
 .de-people-hero h1,
 .de-profile-hero h1 {
   max-width: 860px;
