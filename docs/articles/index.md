@@ -33,6 +33,7 @@
   <button type="button" data-article-tag="Careers">Careers</button>
   <button type="button" data-article-tag="Quality">Quality</button>
   <button type="button" data-article-tag="Networking">Networking</button>
+  <button type="button" data-article-tag="Security">Security</button>
 </div>
 
 <div class="de-article-filter-bar" data-article-filter-status hidden>
@@ -41,6 +42,17 @@
 </div>
 
 <div class="de-article-list">
+  <article class="de-article-card" data-article-tags="Security,Workflows" data-article-author="An ICT learner">
+    <div class="de-article-tags" aria-label="Article tags">
+      <button type="button" data-article-tag="Security">Security</button>
+      <button type="button" data-article-tag="Workflows">Workflows</button>
+    </div>
+    <a class="de-article-card__link" href="identity-management-starts-with-organisational-understanding/">
+      <h3>Why Effective Identity Management Starts with Organisational Understanding</h3>
+      <p>An ICT learner working in a large, decentralised organisation explains why identity and access management depends as much on people, relationships and structure as it does on technology.</p>
+    </a>
+    <p class="de-byline">By an ICT learner · 29 October 2026</p>
+  </article>
   <article class="de-article-card" data-article-tags="Networking,Careers" data-article-author="Gary Martyn">
     <div class="de-article-tags" aria-label="Article tags">
       <button type="button" data-article-tag="Networking">Networking</button>

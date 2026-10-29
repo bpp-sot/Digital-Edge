@@ -150,6 +150,11 @@ def define_env(env) -> None:
         meta = page.meta
         role = meta.get("author_role", "")
         role_html = f"\n      <span>{role}</span>" if role else ""
+        # Authors without a People profile (e.g. learners writing anonymously)
+        # get a plain pill rather than a link to a page that doesn't exist.
+        author = meta.get("author", "")
+        author_slug = meta.get("author_slug")
+        author_html = f'<a href="../../people/{author_slug}/">{author}</a>' if author_slug else f"<span>{author}</span>"
 
         return f"""<section class="de-article-hero">
   <div>
@@ -159,7 +164,7 @@ def define_env(env) -> None:
     <h1>{meta.get("title", "")}</h1>
     <p>{meta.get("lede") or meta.get("description", "")}</p>
     <div class="de-article-meta">
-      <a href="../../people/{meta.get("author_slug", "")}/">{meta.get("author", "")}</a>{role_html}
+      {author_html}{role_html}
       <span>{meta.get("date_display", "")}</span>
       <span>{meta.get("read_time", "")}</span>
     </div>

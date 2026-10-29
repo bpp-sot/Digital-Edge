@@ -5846,3 +5846,330 @@ footer hr {
       "value";
   }
 }
+
+/* Identity management article components. */
+
+/* Iceberg: the tip sits in the "sky", the deeper layers in the "sea". On
+   wider screens each layer is clipped to a slice of one continuous iceberg
+   (the bottom edge of each layer matches the top edge of the next); on
+   phones it falls back to stacked, widening cards. */
+.de-iceberg {
+  margin: 26px 0 32px;
+}
+
+.de-iceberg__sky,
+.de-iceberg__sea {
+  padding: 0 18px;
+}
+
+.de-iceberg__sky {
+  padding-top: 26px;
+  background: linear-gradient(180deg, #f3f9fc 0%, #dcedf6 100%);
+  border-radius: 8px 8px 0 0;
+}
+
+.de-iceberg__sea {
+  padding-bottom: 26px;
+  background: linear-gradient(180deg, #2b7da0 0%, #154f6e 55%, #0b2a44 100%);
+  border-top: 3px dashed rgba(255, 255, 255, 0.75);
+  border-radius: 0 0 8px 8px;
+}
+
+.de-iceberg__layer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 112px;
+  text-align: center;
+}
+
+.de-iceberg__layer span {
+  margin-bottom: 4px;
+  font-size: 0.74rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.de-iceberg__layer strong {
+  max-width: 34ch;
+  font-size: 1.02rem;
+  line-height: 1.35;
+}
+
+.de-iceberg__layer--tip {
+  padding: 20px 26%;
+  color: var(--de-ink);
+  background: #ffffff;
+  clip-path: polygon(38% 0, 62% 0, 76% 100%, 24% 100%);
+}
+
+.de-iceberg__layer--tip span {
+  color: var(--de-teal);
+}
+
+.de-iceberg__layer--technical {
+  padding: 22px 17%;
+  color: var(--de-ink);
+  background: rgba(214, 236, 247, 0.92);
+  clip-path: polygon(24% 0, 76% 0, 86% 100%, 14% 100%);
+}
+
+.de-iceberg__layer--technical span {
+  color: #1d5f7f;
+}
+
+.de-iceberg__layer--deep {
+  min-height: 140px;
+  padding: 24px 9%;
+  color: var(--de-ink);
+  background: rgba(168, 210, 230, 0.95);
+  clip-path: polygon(14% 0, 86% 0, 97% 100%, 3% 100%);
+}
+
+.de-iceberg__layer--deep span {
+  color: var(--de-bpp-purple);
+}
+
+.de-iceberg__layer--deep strong {
+  font-size: 1.2rem;
+}
+
+.de-iceberg figcaption {
+  margin-top: 10px;
+  color: var(--de-muted);
+  font-weight: 800;
+  text-align: center;
+}
+
+.de-access-request {
+  max-width: 640px;
+  margin: 22px auto 30px;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid var(--de-line);
+  border-radius: 8px;
+  box-shadow: 0 14px 34px rgba(23, 33, 43, 0.08);
+}
+
+.de-access-request__bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 18px;
+  color: #ffffff;
+  background: var(--de-ink);
+}
+
+.de-access-request__bar span {
+  padding: 2px 10px;
+  color: var(--de-ink);
+  background: var(--de-gold);
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 900;
+}
+
+.de-access-request dl {
+  margin: 0;
+}
+
+.de-access-request dl > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 14px 18px;
+  border-top: 1px solid var(--de-line);
+}
+
+.de-access-request dl > div:first-child {
+  border-top: 0;
+}
+
+.de-access-request dt {
+  color: var(--de-ink);
+  font-weight: 800;
+}
+
+.de-access-request dd {
+  flex: 0 0 auto;
+  margin: 0;
+  padding: 3px 10px;
+  color: #b23a22;
+  background: #fdf1ee;
+  border: 1px dashed rgba(230, 95, 69, 0.6);
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 900;
+}
+
+.de-access-creep {
+  margin: 22px 0 30px;
+}
+
+.de-access-creep ol {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.de-access-creep ol > li {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  background: #ffffff;
+  border: 1px solid var(--de-line);
+  border-top: 4px solid var(--de-bpp-purple);
+  border-radius: 8px;
+  box-shadow: var(--de-shadow-card);
+}
+
+.de-access-creep__when {
+  color: var(--de-teal);
+  font-size: 0.74rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.de-access-creep ol > li > strong {
+  margin: 4px 0 12px;
+  line-height: 1.3;
+}
+
+.de-access-creep ul {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 6px;
+  margin: auto 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.de-access-creep ul li {
+  padding: 6px 10px;
+  color: #035c5a;
+  background: #dff4f3;
+  border: 1px solid rgba(5, 125, 122, 0.35);
+  border-radius: 6px;
+  font-size: 0.86rem;
+  font-weight: 800;
+}
+
+.de-access-creep ul li.is-stale,
+.de-access-creep__key {
+  color: #b23a22;
+  background: #fdf1ee;
+  border: 1px dashed rgba(230, 95, 69, 0.65);
+}
+
+.de-access-creep figcaption {
+  margin-top: 10px;
+  color: var(--de-muted);
+  font-size: 0.9rem;
+}
+
+.de-access-creep__key {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin-right: 4px;
+  vertical-align: -2px;
+  border-radius: 3px;
+}
+
+.de-mystery-groups {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin: 20px 0 30px;
+}
+
+.de-mystery-groups article {
+  padding: 16px 18px;
+  background: #ffffff;
+  border: 1px solid var(--de-line);
+  border-left: 5px solid var(--de-silver);
+  border-radius: 8px;
+  box-shadow: var(--de-shadow-card);
+}
+
+.de-mystery-groups h3 {
+  margin: 0 0 10px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.98rem;
+}
+
+.de-mystery-groups dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 6px 12px;
+  margin: 0;
+}
+
+.de-mystery-groups dt {
+  color: var(--de-muted);
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.de-mystery-groups dd {
+  margin: 0;
+  color: var(--de-coral);
+  font-size: 0.86rem;
+  font-style: italic;
+  font-weight: 800;
+}
+
+@media (max-width: 900px) {
+  .de-access-creep ol {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .de-mystery-groups {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .de-iceberg__layer--tip,
+  .de-iceberg__layer--technical,
+  .de-iceberg__layer--deep {
+    margin: 0 auto;
+    padding: 16px 18px;
+    border-radius: 8px;
+    clip-path: none;
+  }
+
+  .de-iceberg__layer--tip {
+    width: 72%;
+    margin-bottom: 18px;
+  }
+
+  .de-iceberg__layer--technical {
+    width: 86%;
+    margin: 18px auto 12px;
+  }
+
+  .de-iceberg__layer--deep {
+    width: 100%;
+  }
+}
+
+@media (max-width: 560px) {
+  .de-access-creep ol {
+    grid-template-columns: 1fr;
+  }
+
+  .de-access-request dl > div {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 6px;
+  }
+}

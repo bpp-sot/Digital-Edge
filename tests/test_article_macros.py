@@ -76,6 +76,16 @@ def test_article_hero_omits_role_span_when_no_author_role():
     assert '<a href="../../people/a/">A</a>\n      <span>1 January 2026</span>' in html
 
 
+def test_article_hero_shows_unlinked_author_when_no_profile_slug():
+    macros = load_macros()
+    page = make_page({"title": "T", "description": "D", "author": "An ICT learner", "date_display": "1 January 2026"})
+
+    html = macros["article_hero"](page)
+
+    assert "<span>An ICT learner</span>" in html
+    assert "../../people/" not in html
+
+
 def test_article_hero_lede_falls_back_to_description():
     macros = load_macros()
     page = make_page({"title": "T", "description": "Fallback lede"})
