@@ -34,6 +34,7 @@
   <button type="button" data-article-tag="Quality">Quality</button>
   <button type="button" data-article-tag="Networking">Networking</button>
   <button type="button" data-article-tag="Security">Security</button>
+  <button type="button" data-article-tag="Learning">Learning</button>
 </div>
 
 <div class="de-article-filter-bar" data-article-filter-status hidden>
@@ -42,6 +43,40 @@
 </div>
 
 <div class="de-article-list">
+  <article class="de-article-card" data-article-tags="AI,Security,Careers" data-article-author="Ant Lees">
+    <div class="de-article-tags" aria-label="Article tags">
+      <button type="button" data-article-tag="AI">AI</button>
+      <button type="button" data-article-tag="Security">Security</button>
+      <button type="button" data-article-tag="Careers">Careers</button>
+    </div>
+    <a class="de-article-card__link" href="ai-agent-security-problem/">
+      <h3>The AI Agent Security Problem Nobody Can Afford to Ignore</h3>
+      <p>AI agents can read files, call APIs and take actions on our behalf. Ant Lees on why that turns prompt injection into a software engineering problem, and why apprentices need secure engineering from the start.</p>
+    </a>
+    <p class="de-byline">By Ant Lees · 23 November 2026</p>
+  </article>
+  <article class="de-article-card" data-article-tags="AI,Learning" data-article-author="Gemma McKay">
+    <div class="de-article-tags" aria-label="Article tags">
+      <button type="button" data-article-tag="AI">AI</button>
+      <button type="button" data-article-tag="Learning">Learning</button>
+    </div>
+    <a class="de-article-card__link" href="what-happens-to-learning-when-ai-gives-us-the-answers/">
+      <h3>What Happens to Learning When AI Gives Us the Answers?</h3>
+      <p>AI can plan Gemma McKay's workouts, but it can't get stronger for her. She asks whether learning works the same way, and which effort we should be careful about handing over.</p>
+    </a>
+    <p class="de-byline">By <a href="../people/gemma-mckay/" data-author-filter="Gemma McKay">Gemma McKay</a> · 20 November 2026</p>
+  </article>
+  <article class="de-article-card" data-article-tags="Learning,Careers" data-article-author="Francesca Tagliaferri">
+    <div class="de-article-tags" aria-label="Article tags">
+      <button type="button" data-article-tag="Learning">Learning</button>
+      <button type="button" data-article-tag="Careers">Careers</button>
+    </div>
+    <a class="de-article-card__link" href="humbling-power-of-being-a-beginner-again/">
+      <h3>The Humbling Power of Being a Beginner (Again)</h3>
+      <p>Francesca Tagliaferri teaches machine learning and AI. Studying cloud engineering has put her back in the learner's seat, and changed how she sees her students.</p>
+    </a>
+    <p class="de-byline">By Francesca Tagliaferri · 18 November 2026</p>
+  </article>
   <article class="de-article-card" data-article-tags="Security,Workflows" data-article-author="An ICT learner">
     <div class="de-article-tags" aria-label="Article tags">
       <button type="button" data-article-tag="Security">Security</button>

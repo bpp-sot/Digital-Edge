@@ -31,6 +31,13 @@ Gemma believes successful technology adoption relies on both technical capabilit
 
 <div class="de-article-list de-article-list--profile">
   <article class="de-article-card">
+    <a class="de-article-card__link" href="../../articles/what-happens-to-learning-when-ai-gives-us-the-answers/">
+      <h3>What Happens to Learning When AI Gives Us the Answers?</h3>
+      <p>The gym, showing your working, and which effort we should be careful about handing to AI.</p>
+    </a>
+    <p class="de-article-card__meta">Article · <a href="../../articles/?tag=AI">AI</a>, <a href="../../articles/?tag=Learning">Learning</a></p>
+  </article>
+  <article class="de-article-card">
     <a class="de-article-card__link" href="../../articles/building-better-tech/">
       <h3>Building Better Tech</h3>
       <p>Why sustainable innovation is becoming as important a professional judgement as technical skill.</p>
