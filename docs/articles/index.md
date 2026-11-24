@@ -77,6 +77,29 @@
     </a>
     <p class="de-byline">By Francesca Tagliaferri · 18 November 2026</p>
   </article>
+  <article class="de-article-card" data-article-tags="AI,Careers,Learning" data-article-author="Scott Kenyon">
+    <div class="de-article-tags" aria-label="Article tags">
+      <button type="button" data-article-tag="AI">AI</button>
+      <button type="button" data-article-tag="Careers">Careers</button>
+      <button type="button" data-article-tag="Learning">Learning</button>
+    </div>
+    <a class="de-article-card__link" href="ai-wont-replace-the-apprentice-software-engineer/">
+      <h3>AI Won't Replace the Apprentice Software Engineer. But It Will Redefine Them.</h3>
+      <p>If AI can write and deploy the code, what does it mean to be an apprentice software engineer? Scott Kenyon on why the fundamentals could matter more, not less.</p>
+    </a>
+    <p class="de-byline">By <a href="../people/scott-kenyon/" data-author-filter="Scott Kenyon">Scott Kenyon</a> · 16 November 2026</p>
+  </article>
+  <article class="de-article-card" data-article-tags="AI,Learning" data-article-author="Steve Alami">
+    <div class="de-article-tags" aria-label="Article tags">
+      <button type="button" data-article-tag="AI">AI</button>
+      <button type="button" data-article-tag="Learning">Learning</button>
+    </div>
+    <a class="de-article-card__link" href="is-ai-becoming-the-norm/">
+      <h3>Is AI… Becoming the Norm?</h3>
+      <p>Steve Alami chats to AI while walking the dog and doesn't think twice about it. So when does new technology stop being new, and what matters once it's normal?</p>
+    </a>
+    <p class="de-byline">By Steve Alami · 13 November 2026</p>
+  </article>
   <article class="de-article-card" data-article-tags="Security,Workflows" data-article-author="An ICT learner">
     <div class="de-article-tags" aria-label="Article tags">
       <button type="button" data-article-tag="Security">Security</button>

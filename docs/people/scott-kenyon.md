@@ -29,6 +29,13 @@ He works closely with employers, learners and industry partners to design and de
 
 <div class="de-article-list de-article-list--profile">
   <article class="de-article-card">
+    <a class="de-article-card__link" href="../../articles/ai-wont-replace-the-apprentice-software-engineer/">
+      <h3>AI Won't Replace the Apprentice Software Engineer. But It Will Redefine Them.</h3>
+      <p>If AI can write and deploy the code, what does it mean to be an apprentice software engineer? Scott Kenyon on why the fundamentals could matter more, not less.</p>
+    </a>
+    <p class="de-article-card__meta">Article · <a href="../../articles/?tag=AI">AI</a>, <a href="../../articles/?tag=Careers">Careers</a>, <a href="../../articles/?tag=Learning">Learning</a></p>
+  </article>
+  <article class="de-article-card">
     <a class="de-article-card__link" href="../../articles/why-the-best-companies-invest-in-quality-engineers/">
       <h3>Why the Best Companies Are Investing in Quality Engineers, Not Just All-Out AI</h3>
       <p>AI can validate that a login works. It can't tell you whether the product actually feels broken to the person using it.</p>

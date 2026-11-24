@@ -1916,6 +1916,41 @@
     });
   }
 
+  function installPipelineRuns() {
+    document.querySelectorAll("[data-pipeline]").forEach((pipeline) => {
+      const run = pipeline.querySelector("[data-pipeline-run]");
+      const stages = Array.from(pipeline.querySelectorAll("[data-pipeline-stage]"));
+      const status = pipeline.querySelector("[data-pipeline-status]");
+      if (!run || !stages.length) return;
+
+      const reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      const step = reduceMotion ? 0 : 650;
+      let timers = [];
+
+      stages.forEach((stage) => stage.setAttribute("data-state", "queued"));
+      run.hidden = false;
+
+      run.addEventListener("click", () => {
+        timers.forEach((timer) => window.clearTimeout(timer));
+        timers = [];
+        stages.forEach((stage) => stage.setAttribute("data-state", "queued"));
+        run.disabled = true;
+        if (status) status.textContent = "Pipeline running.";
+
+        stages.forEach((stage, index) => {
+          timers.push(window.setTimeout(() => stage.setAttribute("data-state", "running"), step * index * 2));
+          timers.push(window.setTimeout(() => stage.setAttribute("data-state", "failed"), step * (index * 2 + 1)));
+        });
+
+        timers.push(window.setTimeout(() => {
+          run.disabled = false;
+          run.textContent = "Run it again";
+          if (status) status.textContent = "Pipeline failed. Each stage raises a question.";
+        }, step * stages.length * 2));
+      });
+    });
+  }
+
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", installCodeCopyButtons);
     document.addEventListener("DOMContentLoaded", installInlineGuidedPractice);
@@ -1930,6 +1965,7 @@
     document.addEventListener("DOMContentLoaded", installArticlePolls);
     document.addEventListener("DOMContentLoaded", installSinglePointDiagrams);
     document.addEventListener("DOMContentLoaded", installChoiceSorters);
+    document.addEventListener("DOMContentLoaded", installPipelineRuns);
   } else {
     installCodeCopyButtons();
     installInlineGuidedPractice();
@@ -1944,6 +1980,7 @@
     installArticlePolls();
     installSinglePointDiagrams();
     installChoiceSorters();
+    installPipelineRuns();
   }
 
   installSearchPolish(40);
