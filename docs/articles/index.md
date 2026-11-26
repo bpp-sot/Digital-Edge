@@ -43,6 +43,18 @@
 </div>
 
 <div class="de-article-list">
+  <article class="de-article-card" data-article-tags="Networking,AI,Careers" data-article-author="Gary Martyn">
+    <div class="de-article-tags" aria-label="Article tags">
+      <button type="button" data-article-tag="Networking">Networking</button>
+      <button type="button" data-article-tag="AI">AI</button>
+      <button type="button" data-article-tag="Careers">Careers</button>
+    </div>
+    <a class="de-article-card__link" href="ai-data-centre-fabrics/">
+      <h3>AI Data Centre Fabrics: Is Artificial Intelligence Redesigning Networking from the Ground Up?</h3>
+      <p>AI training clusters are putting demands on data centre networks that they were never designed for. Gary Martyn on GPUs, microseconds, Ethernet vs InfiniBand, and what it all means for IT support, network engineering and cyber security.</p>
+    </a>
+    <p class="de-byline">By <a href="../people/gary-martyn/" data-author-filter="Gary Martyn">Gary Martyn</a> · 26 November 2026</p>
+  </article>
   <article class="de-article-card" data-article-tags="AI,Security,Careers" data-article-author="Ant Lees">
     <div class="de-article-tags" aria-label="Article tags">
       <button type="button" data-article-tag="AI">AI</button>

@@ -27,6 +27,13 @@ Gary approaches education with curiosity and encourages the same in others, beli
 
 <div class="de-article-list de-article-list--profile">
   <article class="de-article-card">
+    <a class="de-article-card__link" href="../../articles/ai-data-centre-fabrics/">
+      <h3>AI Data Centre Fabrics: Is Artificial Intelligence Redesigning Networking from the Ground Up?</h3>
+      <p>AI training clusters are putting demands on data centre networks that they were never designed for. Gary Martyn on GPUs, microseconds, Ethernet vs InfiniBand, and what it all means for IT support, network engineering and cyber security.</p>
+    </a>
+    <p class="de-article-card__meta">Article · <a href="../../articles/?tag=Networking">Networking</a>, <a href="../../articles/?tag=AI">AI</a>, <a href="../../articles/?tag=Careers">Careers</a></p>
+  </article>
+  <article class="de-article-card">
     <a class="de-article-card__link" href="../../articles/wifi-7-vs-private-5g/">
       <h3>WiFi 7 vs Private 5G: Is WiFi Dying and Should We Ditch It Now?</h3>
       <p>Private 5G is growing fast in industry, and some say WiFi's days are numbered. Gary Martyn weighs up both technologies, where each belongs, and what it means for network engineers.</p>
