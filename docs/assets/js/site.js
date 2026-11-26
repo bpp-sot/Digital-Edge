@@ -393,6 +393,10 @@
       cards.forEach((card) => {
         card.hidden = activeFilter !== "all" && card.dataset.eventFilterKey !== activeFilter;
       });
+
+      document.querySelectorAll("[data-event-filter-group]").forEach((group) => {
+        group.hidden = !Array.from(group.querySelectorAll("[data-event-filter-key]")).some((card) => !card.hidden);
+      });
     }
 
     filterButtons.forEach((button) => {

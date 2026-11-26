@@ -2164,7 +2164,7 @@ body.de-modal-open {
   background: rgba(98, 199, 194, 0.28);
 }
 
-.de-event-card span:not(.de-card__label):not(.de-event-status):not(.de-event-type) {
+.de-event-card > span:not([class]) {
   display: block;
   margin-bottom: 12px;
   color: var(--de-teal);
@@ -9110,5 +9110,439 @@ p.de-working-out__answer {
 
   .de-ticket-board__tickets li {
     min-height: 0;
+  }
+}
+
+/* ==========================================================================
+   Events: Digital Edge Live tickets and the Skills Sessions year planner
+   ========================================================================== */
+
+.de-event-type--live {
+  color: #4a1670;
+  background: var(--de-bpp-purple-soft);
+}
+
+.de-live-events,
+.de-skills-year {
+  margin: 8px 0 40px;
+}
+
+.de-live-events__header,
+.de-skills-year__header {
+  margin-bottom: 16px;
+}
+
+.de-live-events__header .de-kicker,
+.de-skills-year__header .de-kicker {
+  color: var(--de-bpp-purple);
+}
+
+.de-live-events__header h3,
+.de-skills-year__header h3 {
+  margin: 0 0 6px;
+  font-size: clamp(1.4rem, 2.6vw, 1.9rem);
+  line-height: 1.15;
+}
+
+.de-live-events__header p:not(.de-kicker),
+.de-skills-year__header p:not(.de-kicker) {
+  max-width: 720px;
+  margin: 0;
+  color: var(--de-muted);
+}
+
+/* A ticket: the main body, a perforated tear line, and a date stub. */
+.de-live-events__tickets {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.de-event-card.de-event-card--live {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 104px;
+  align-items: stretch;
+  min-height: 0;
+  padding: 0;
+  overflow: hidden;
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--de-bpp-purple-dark) 0%, #4d1873 58%, var(--de-bpp-purple) 100%);
+  border: 0;
+  border-radius: 14px;
+  box-shadow: 0 18px 40px rgba(53, 16, 79, 0.22);
+  scroll-margin-top: 110px;
+}
+
+.de-event-card.de-event-card--live:hover,
+.de-event-card.de-event-card--live:focus {
+  box-shadow: 0 22px 48px rgba(53, 16, 79, 0.3);
+  transform: translateY(-2px);
+}
+
+.de-event-card.de-event-card--live:focus-visible {
+  outline: 0;
+  box-shadow: 0 0 0 4px rgba(244, 185, 66, 0.75), 0 22px 48px rgba(53, 16, 79, 0.3);
+}
+
+.de-live-ticket__main {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 22px 22px 20px;
+}
+
+.de-live-ticket__main::after {
+  content: "";
+  position: absolute;
+  top: 18px;
+  right: 104px;
+  bottom: 18px;
+  border-right: 2px dashed rgba(255, 255, 255, 0.35);
+}
+
+.de-event-card--live .de-event-status--upcoming {
+  color: #12313a;
+  background: var(--de-bpp-teal);
+}
+
+.de-live-ticket__brand {
+  margin-top: 4px;
+  color: var(--de-gold);
+  font-size: 0.8rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.de-event-card.de-event-card--live strong {
+  margin: 2px 0 14px;
+  color: #ffffff;
+  font-size: clamp(2rem, 4vw, 2.7rem);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.de-live-ticket__venue,
+.de-live-ticket__time {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255, 255, 255, 0.92);
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.de-live-ticket__venue::before,
+.de-live-ticket__time::before {
+  content: "";
+  flex: 0 0 auto;
+  width: 8px;
+  height: 8px;
+  background: var(--de-bpp-teal);
+  border-radius: 50%;
+}
+
+.de-live-ticket__time {
+  margin-top: 4px;
+}
+
+.de-live-ticket__time::before {
+  background: var(--de-gold);
+}
+
+.de-live-ticket__note {
+  margin-top: 16px;
+  padding: 5px 10px;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.de-live-ticket__stub {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  position: relative;
+  padding: 16px 8px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.de-live-ticket__stub::before,
+.de-live-ticket__stub::after {
+  content: "";
+  position: absolute;
+  left: -13px;
+  width: 26px;
+  height: 26px;
+  background: var(--de-bg);
+  border-radius: 50%;
+}
+
+.de-live-ticket__stub::before {
+  top: -13px;
+}
+
+.de-live-ticket__stub::after {
+  bottom: -13px;
+}
+
+.de-live-ticket__stub b {
+  color: #ffffff;
+  font-size: 2.4rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.de-live-ticket__stub span {
+  color: var(--de-gold);
+  font-size: 0.95rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.de-live-ticket__stub em {
+  margin-top: 10px;
+  padding: 3px 8px;
+  color: var(--de-gold);
+  border: 2px solid var(--de-gold);
+  border-radius: 4px;
+  font-size: 0.72rem;
+  font-style: normal;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+  text-transform: uppercase;
+  transform: rotate(-8deg);
+}
+
+/* The Skills Sessions year, one calendar page per month. */
+.de-skills-year__header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 28px;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.de-skills-year__header > div {
+  flex: 1 1 420px;
+}
+
+.de-skills-year__header p.de-skills-year__slot {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px 16px;
+  color: var(--de-ink);
+  background: #ffffff;
+  border: 1px solid var(--de-line);
+  border-left: 4px solid var(--de-bpp-purple);
+  border-radius: 8px;
+  box-shadow: var(--de-shadow-card);
+}
+
+.de-skills-year__slot strong {
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+.de-skills-year__slot span {
+  color: var(--de-muted);
+  font-size: 0.85rem;
+  font-weight: 800;
+}
+
+.de-skills-year__months {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.de-skills-year__month {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0;
+  padding: 0 12px 12px;
+  background: #ffffff;
+  border: 1px solid var(--de-line);
+  border-radius: 10px;
+  box-shadow: var(--de-shadow-card);
+}
+
+.de-skills-year__month::before,
+.de-skills-year__month::after {
+  content: "";
+  position: absolute;
+  top: -6px;
+  width: 8px;
+  height: 14px;
+  background: var(--de-silver);
+  border: 2px solid #ffffff;
+  border-radius: 999px;
+}
+
+.de-skills-year__month::before {
+  left: 28%;
+}
+
+.de-skills-year__month::after {
+  right: 28%;
+}
+
+.de-skills-year__month h4 {
+  margin: 0 -12px 4px;
+  padding: 12px 12px 9px;
+  color: #ffffff;
+  background: var(--de-bpp-purple);
+  border-radius: 9px 9px 0 0;
+  font-size: 0.82rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.de-skills-year__month:nth-child(3n + 2) h4 {
+  background: var(--de-teal);
+}
+
+.de-skills-year__month:nth-child(3n) h4 {
+  background: var(--de-bpp-purple-dark);
+}
+
+.de-event-card.de-event-card--session {
+  display: grid;
+  grid-template-columns: 50px minmax(0, 1fr);
+  gap: 10px;
+  align-items: center;
+  width: 100%;
+  min-height: 0;
+  padding: 10px;
+  background: #fbfcfe;
+  border-radius: 8px;
+  box-shadow: none;
+}
+
+.de-event-card.de-event-card--session:hover,
+.de-event-card.de-event-card--session:focus {
+  background: var(--de-bpp-purple-soft);
+  border-color: rgba(111, 45, 168, 0.4);
+  box-shadow: 0 8px 18px rgba(53, 16, 79, 0.1);
+}
+
+.de-skills-year__day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6px 0 5px;
+  color: var(--de-muted);
+  background: #ffffff;
+  border: 1px solid var(--de-line);
+  border-radius: 6px;
+  font-size: 0.7rem;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.de-skills-year__day b {
+  color: var(--de-bpp-purple);
+  font-size: 1.35rem;
+  letter-spacing: 0;
+}
+
+.de-event-card.de-event-card--session strong {
+  margin: 0;
+  font-size: 0.98rem;
+  line-height: 1.25;
+}
+
+.de-skills-year__live {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  padding: 9px 12px;
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--de-bpp-purple-dark), var(--de-bpp-purple));
+  border-radius: 8px;
+  font-weight: 900;
+  line-height: 1.25;
+  text-decoration: none;
+}
+
+.de-skills-year__live small {
+  color: var(--de-gold);
+  font-size: 0.74rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.de-skills-year__live:hover,
+.de-skills-year__live:focus {
+  color: #ffffff;
+  text-decoration: none;
+  box-shadow: 0 8px 18px rgba(53, 16, 79, 0.22);
+}
+
+.de-skills-year__live:focus-visible {
+  outline: 3px solid rgba(244, 185, 66, 0.75);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .de-event-card.de-event-card--live:hover,
+  .de-event-card.de-event-card--live:focus {
+    transform: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .de-live-events__tickets {
+    grid-template-columns: 1fr;
+  }
+
+  .de-skills-year__months {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 680px) {
+  .de-skills-year__months {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 460px) {
+  .de-skills-year__months {
+    grid-template-columns: 1fr;
+  }
+
+  .de-event-card.de-event-card--live {
+    grid-template-columns: minmax(0, 1fr) 84px;
+  }
+
+  .de-live-ticket__main {
+    padding: 18px 16px;
+  }
+
+  .de-live-ticket__main::after {
+    right: 84px;
+  }
+
+  .de-live-ticket__stub b {
+    font-size: 2rem;
   }
 }

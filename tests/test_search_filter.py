@@ -125,6 +125,42 @@ class TestFeaturedArticleFallback:
         assert "articles/new/" in card
 
 
+def event_card(title, *, status="Upcoming", start=None, classes="de-event-card"):
+    start_attr = f'\n  data-event-start="{start}"' if start else ""
+    return (
+        f'<button\n  class="{classes}"\n  type="button"\n'
+        f'  data-event-title="{title}"\n  data-event-status="{status}"{start_attr}\n'
+        f'  data-event-description="About {title}."\n>\n  <strong>{title}</strong>\n</button>\n'
+    )
+
+
+class TestNextFeaturedEvent:
+    def test_picks_the_soonest_upcoming_event_including_modifier_classes(self, tmp_path):
+        (tmp_path / "events.md").write_text(
+            event_card("Later", start="2099-03-01T12:00:00+00:00")
+            + event_card("Sooner", start="2099-01-12T13:00:00+00:00", classes="de-event-card de-event-card--session"),
+            encoding="utf-8",
+        )
+
+        event = search_filter.next_featured_event(make_config(tmp_path))
+
+        assert event["title"] == "Sooner"
+        assert event["summary"] == "About Sooner."
+
+    def test_skips_past_undated_and_already_started_events(self, tmp_path):
+        (tmp_path / "events.md").write_text(
+            event_card("Marked past", status="Past", start="2099-01-01T12:00:00+00:00", classes="de-event-card de-event-card--past")
+            + event_card("No date yet", classes="de-event-card de-event-card--live")
+            + event_card("Already happened", start="2000-01-01T12:00:00+00:00")
+            + event_card("Next one", start="2099-06-01T12:00:00+01:00"),
+            encoding="utf-8",
+        )
+
+        event = search_filter.next_featured_event(make_config(tmp_path))
+
+        assert event["title"] == "Next one"
+
+
 class TestOnPostBuildExternalLinks:
     def test_adds_new_tab_attributes_to_known_external_links(self, tmp_path):
         site_dir = tmp_path / "site"

@@ -47,7 +47,7 @@ FRONTMATTER_PATTERN = re.compile(r"\A---\s*\n(?P<body>.*?)\n---\s*\n", re.DOTALL
 FRONTMATTER_FIELD_PATTERN = re.compile(r'^(?P<key>[a-zA-Z_]+):\s*"?(?P<value>[^"\n]*)"?\s*$', re.MULTILINE)
 PERSON_CARD_PATTERN = re.compile(r'<article class="de-person-card">.*?</article>', re.DOTALL)
 PERSON_NAME_PATTERN = re.compile(r'de-person-card__name"[^>]*>(?P<name>[^<]+)</a>')
-EVENT_CARD_PATTERN = re.compile(r"<button\s+class=\"de-event-card\"(?P<body>.*?)</button>", re.DOTALL)
+EVENT_CARD_PATTERN = re.compile(r"<button\s+class=\"de-event-card(?:\s[^\"]*)?\"(?P<body>.*?)</button>", re.DOTALL)
 EVENT_ATTR_PATTERN = re.compile(r"\sdata-event-(?P<name>[a-z-]+)=\"(?P<value>[^\"]*)\"", re.DOTALL)
 EVENT_SUMMARY_PATTERN = re.compile(r"<p>(?P<summary>.*?)</p>", re.DOTALL)
 
